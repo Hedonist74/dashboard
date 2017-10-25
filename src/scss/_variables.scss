@@ -13,6 +13,7 @@ $darkGrey: #979797;
 $darkGrey: #bababa;
 $lightGrey: #e3e3e3;
 $xsLightGrey: #f5f5f5;
+$mutedGrey: #808080;
 
 $orange: #f58220;
 $orangeLight: #ffa200;
@@ -27,6 +28,7 @@ $blue: #56819f;
 
 // Header
 $headerBg: #fff;
+$top-menu-hover-bgc: #f5f5f2;
 
 // Aside
 $asideBg: #191919;
@@ -42,3 +44,34 @@ $cardBg: #fff;
 $titleColor: #a6a6a6;
 $titleFontSize: 16px;
 $smallTitle: 14px;
+
+// form-group
+$formFontFamily: 'Roboto', sans-serif;
+$formFW: 300;
+$formMargin: 8px;
+$formElementWidth: 155px;
+$formElementBorder: 1px solid #e3e3e3;
+$formElementErrorBorder: 1px solid #ff0000;
+$formElementActiveBorder: 1px solid #b1b1b1;
+$formElementBorderRadius: 4px;
+$formElementPadding: 8px 12px;
+$formElementColor: #a6a6a6;
+$formElementActiveColor: #333;
+$textareaMinHeight: 125px;
+$textareaFZ: 12px;
+$inputFZ: 14px;
+
+// BTN
+
+$btnPadding: 10px 25px;
+$btnFontColor: #fff;
+$btnFontFamily: 'Roboto', sans-serif;
+$btnFW: 300;
+$btnFZ: 18px;
+$btnBorderRadius: 4px;
+
+$btnGrey: #979797;
+$btnGreyHover: #bababa;
+$btnOrange: #f58220;
+$btnOrangeHover: #ffA200;
+$btnMutedBGColor: #e3e3e3;

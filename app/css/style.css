@@ -210,6 +210,10 @@ button {
           align-items: center;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .fixed-to-top {
   position: fixed;
   z-index: 99;
@@ -236,7 +240,7 @@ button {
 }
 
 #header .cash {
-  padding: 18px;
+  padding: 16px 18px 18px 18px;
   border-left: 1px solid #e3e3e3;
   font-weight: 400;
   font-size: 20px;
@@ -258,20 +262,28 @@ button {
   color: #bababa;
 }
 
-#header .personal {
-  padding: 18px;
-  border-left: 1px solid #e3e3e3;
-  font-weight: 400;
-  font-size: 13px;
-  color: #56819f;
+#header .notification .notification-condition {
+  position: relative;
 }
 
-#header .personal span {
-  margin-left: 15px;
-  font-weight: 300;
+#header .notification .notification-circle {
+  width: 8px;
+  height: 8px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #f58220;
+  position: absolute;
+  top: -10%;
+  left: 60%;
+}
+
+#header .personal {
+  padding: 20px;
+  border-left: 1px solid #e3e3e3;
 }
 
 #header .personal .icon-profile {
+  margin-right: 15px;
   font-size: 17px;
   color: #bababa;
 }
@@ -281,6 +293,16 @@ button {
   border-left: 1px solid #e3e3e3;
   font-size: 20px;
   color: #bababa;
+}
+
+.profile-text, .aside-bottom .manager-name {
+  font-weight: 300;
+  font-size: 13px;
+  color: #56819f;
+}
+
+.top-menu:hover {
+  background-color: #f5f5f2;
 }
 
 /* HEADER END */
@@ -318,6 +340,10 @@ button {
   margin-top: 5px;
 }
 
+#aside .aside-menu ul {
+  margin-bottom: 25px;
+}
+
 #aside .aside-menu ul li {
   color: #bababa;
 }
@@ -333,7 +359,172 @@ button {
   margin-right: 15px;
 }
 
+.aside-bottom {
+  padding-top: 25px;
+  border-top: 1px solid #333;
+}
+
+.aside-bottom .your-manager, .aside-bottom > span:first-child {
+  padding-left: 18px;
+  padding-top: 20px;
+}
+
+.aside-bottom .your-manager img, .aside-bottom > span:first-child img {
+  margin-right: 10px;
+}
+
+.aside-bottom .your-manager .photo-condition, .aside-bottom > span:first-child .photo-condition {
+  position: relative;
+}
+
+.aside-bottom .your-manager .circle, .aside-bottom > span:first-child .circle {
+  width: 11px;
+  height: 11px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #04ae00;
+  position: absolute;
+  top: 0;
+  left: 60%;
+}
+
+.aside-bottom > span:first-child {
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  color: #808080;
+}
+
 /* ASIDE END */
+/* INPUT START */
+.form-group {
+  margin: 8px;
+}
+
+.form-group input, .form-group textarea {
+  width: 155px;
+  padding: 8px 12px;
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  color: #333;
+}
+
+.form-group input ::-webkit-input-placeholder, .form-group textarea ::-webkit-input-placeholder {
+  color: #a6a6a6;
+}
+
+.form-group input ::-moz-placeholder, .form-group textarea ::-moz-placeholder {
+  color: #a6a6a6;
+}
+
+.form-group input :-moz-placeholder, .form-group textarea :-moz-placeholder {
+  color: #a6a6a6;
+}
+
+.form-group input :-ms-input-placeholder, .form-group textarea :-ms-input-placeholder {
+  color: #a6a6a6;
+}
+
+.form-group input[placeholder] {
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+
+.form-group input::-moz-placeholder {
+  text-overflow: ellipsis;
+}
+
+.form-group input:-moz-placeholder {
+  text-overflow: ellipsis;
+}
+
+.form-group input:-ms-input-placeholder {
+  text-overflow: ellipsis;
+}
+
+.form-group textarea[placeholder] {
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+
+.form-group textarea::-moz-placeholder {
+  text-overflow: ellipsis;
+}
+
+.form-group textarea:-moz-placeholder {
+  text-overflow: ellipsis;
+}
+
+.form-group textarea:-ms-input-placeholder {
+  text-overflow: ellipsis;
+}
+
+.form-group textarea {
+  min-height: 125px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.form-group input {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.form-group:hover input, .form-group:hover textarea {
+  border: 1px solid #b1b1b1;
+}
+
+.form-group.error input, .form-group.error textarea {
+  color: #333;
+}
+
+.form-wrapper {
+  display: inline-block;
+}
+
+.btn-wrapper {
+  display: inline-block;
+}
+
+/* BTN Styles Start */
+.btn-default {
+  text-align: center;
+  display: inline-block;
+  padding: 10px 25px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+}
+
+.btn-default.btn-grey {
+  background-color: #979797;
+}
+
+.btn-default.btn-grey:hover {
+  background-color: #bababa;
+}
+
+.btn-default.btn-orange {
+  background-color: #f58220;
+}
+
+.btn-default.btn-orange:hover {
+  background-color: #ffA200;
+}
+
+.btn-default.btn-muted {
+  background-color: #e3e3e3;
+}
+
+/* BTN Styles End */
+/* INPUT END */
 /* INNER START */
 .content-wrapper {
   padding: 18px;

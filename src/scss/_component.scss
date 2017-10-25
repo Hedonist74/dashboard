@@ -24,7 +24,7 @@
   background-color: $headerBg;
 
   .cash {
-    padding: 18px;
+    padding: 16px 18px 18px 18px;
     border-left: 1px solid $lightGrey;
     font-weight: $fontRegular;
     font-size: 20px;
@@ -44,21 +44,28 @@
     border-left: 1px solid $lightGrey;
     font-size: 20px;
     color: $darkGrey;
+
+    .notification-condition {
+      position: relative;
+    }
+
+    .notification-circle {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $orange;
+      position: absolute;
+      top: -10%;
+      left: 60%;
+    }
   }
 
   .personal {
-    padding: 18px;
+    padding: 20px;
     border-left: 1px solid $lightGrey;
-    font-weight: $fontRegular;
-    font-size: 13px;
-    color: $blue;
-
-    span {
-      margin-left: 15px;
-      font-weight: 300;
-    }
 
     .icon-profile {
+      margin-right: 15px;
       font-size: 17px;
       color: $darkGrey;
     }
@@ -72,6 +79,16 @@
     color: $darkGrey;
   }
 
+}
+
+.profile-text {
+  font-weight: $fontLight;
+  font-size: 13px;
+  color: $blue;
+}
+
+.top-menu:hover {
+  background-color: $top-menu-hover-bgc;
 }
 
 /* HEADER END */
@@ -112,7 +129,7 @@
 
   .aside-menu {
     ul{
-
+      margin-bottom: 25px;
 
       li{
         color: $darkGrey;
@@ -141,11 +158,152 @@
   }
 }
 
-#aside {
+.aside-bottom {
+  padding-top: 25px;
+  border-top: 1px solid $black;
+
+  .manager-name {
+    @extend .profile-text;
+  }
+
+  .your-manager {
+    padding-left: 18px;
+    padding-top: 20px;
+
+    img {
+      margin-right: 10px;
+    }
+
+    .photo-condition {
+      position: relative;
+    }
+
+    .circle {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background-color: $green;
+      position: absolute;
+      top: 0;
+      left: 60%;
+    }
+  }
+
+  & > span:first-child {
+    @extend .your-manager;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: $fontMedium;
+    font-size: $smallTitle;
+    color: $mutedGrey;
+  }
 
 }
 
+#aside {
+}
+
 /* ASIDE END */
+/* INPUT START */
+
+
+
+.form-group {
+  margin: $formMargin;
+
+  input, textarea {
+    width: $formElementWidth;
+    padding: $formElementPadding;
+    border: $formElementBorder;
+    -webkit-border-radius: $formElementBorderRadius;
+    -moz-border-radius: $formElementBorderRadius;
+    border-radius: $formElementBorderRadius;
+    color: $formElementActiveColor;
+    ::-webkit-input-placeholder {color: $formElementColor;}
+    ::-moz-placeholder          {color: $formElementColor;} // Firefox 19
+    :-moz-placeholder           {color: $formElementColor;} // Firefox 18
+    :-ms-input-placeholder      {color: $formElementColor;}
+  }
+  input[placeholder]          {text-overflow: ellipsis;}
+  input::-moz-placeholder     {text-overflow: ellipsis;}
+  input:-moz-placeholder      {text-overflow: ellipsis;}
+  input:-ms-input-placeholder {text-overflow: ellipsis;}
+  textarea[placeholder]          {text-overflow: ellipsis;}
+  textarea::-moz-placeholder     {text-overflow: ellipsis;}
+  textarea:-moz-placeholder      {text-overflow: ellipsis;}
+  textarea:-ms-input-placeholder {text-overflow: ellipsis;}
+
+  textarea {
+    min-height: $textareaMinHeight;
+    font-family: $formFontFamily;
+    font-size: $textareaFZ;
+    font-weight: $formFW;
+  }
+
+  input {
+    font-family: $formFontFamily;
+    font-size: $inputFZ;
+    font-weight: $formFW;
+  }
+}
+
+.form-group:hover {
+  input, textarea {
+    border: $formElementActiveBorder;
+  }
+}
+
+.form-group.error {
+  input, textarea {
+    color: $formElementActiveColor;
+  }
+}
+
+.form-wrapper {
+  display: inline-block;
+}
+
+.btn-wrapper {
+  display: inline-block;
+}
+
+/* BTN Styles Start */
+
+.btn-default {
+  text-align: center;
+  display: inline-block;
+  padding: $btnPadding;
+  color: $btnFontColor;
+  font-family: $btnFontFamily;
+  font-weight: $btnFW;
+  font-size: $btnFZ;
+  border-radius: $btnBorderRadius;
+}
+
+.btn-default.btn-grey {
+  background-color: $btnGrey;
+}
+
+.btn-default.btn-grey:hover {
+  background-color: $btnGreyHover;
+}
+
+.btn-default.btn-orange {
+  background-color: $btnOrange;
+}
+
+.btn-default.btn-orange:hover {
+  background-color: $btnOrangeHover;
+}
+
+.btn-default.btn-muted {
+  background-color: $btnMutedBGColor;
+}
+
+/* BTN Styles End */
+
+
+/* INPUT END */
 /* INNER START */
 
 .content-wrapper {

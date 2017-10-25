@@ -18,20 +18,22 @@
 
     <header id="header" class="fixed-to-top">
         <div class="flex-container justify-end align-center">
-            <div class="cash">
+            <div class="cash top-menu">
                 <i class="icon-wallet"></i>
                 <span>$1,500,00</span>
                 <i class="icon-arrow-down"></i>
             </div>
-            <div class="notification">
-                <i class="icon-notification"></i>
-                <span class="notification-circle"></span>
+            <div class="notification top-menu">
+                <div class="notification-condition">
+                    <i class="icon-notification"></i>
+                    <span class="notification-circle"></span>
+                </div>
             </div>
-            <div class="personal flex-container align-center">
+            <div class="personal top-menu flex-container align-center">
                 <i class="icon-profile"></i>
-                <span>Leonardo Dicaprio</span>
+                <span class="profile-text">Leonardo Dicaprio</span>
             </div>
-            <div class="quit">
+            <div class="quit top-menu">
                 <i class="icon-quit"></i>
             </div>
         </div>
@@ -101,6 +103,18 @@
                 </li>
             </ul>
         </div>
+        <div class="aside-bottom">
+            <span>Your Manager</span>
+            <div class="your-manager flex-container align-center">
+                <div class="photo-condition">
+                    <img src="img/your-manager.png" alt="Manager">
+                    <span class="circle"></span>
+                </div>
+                <span class="manager-name">
+                    Mikhael E.
+                </span>
+            </div>
+        </div>
     </aside>
 
 <!--ASIDE END-->
@@ -114,7 +128,22 @@
                     </span>
                 </div>
                 <div class="card-body">
-
+                    <div class="form-wrapper">
+                        <div class="form-group">
+                            <textarea name="userMessage" class="form-control" placeholder="Text input"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="userName" placeholder="Placeholder">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="psw" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="btn-wrapper">
+                        <div class="btn-default btn-grey">Button</div>
+                        <div class="btn-default btn-orange">Button</div>
+                        <div class="btn-default btn-muted">Disabled Button</div>
+                    </div>
                 </div>
             </div>
         </div>
