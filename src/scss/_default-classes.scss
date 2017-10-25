@@ -16,6 +16,8 @@
   align-items: center;
 }
 
+// text align
+
 .text-center {
   text-align: center;
 }
@@ -26,4 +28,25 @@
   position: fixed;
   z-index: 99;
   top: 0;
+}
+
+// text-color
+.text-orange {
+  color: $orange;
+}
+
+.text-grey {
+  color: $darkGrey;
+}
+
+// text weight
+
+.text-bold {
+  font-weight: 700;
+}
+
+// width
+
+.full-width{
+  width: 100%;
 }

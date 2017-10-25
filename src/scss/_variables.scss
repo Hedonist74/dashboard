@@ -7,7 +7,7 @@ $fontBold: 700;
 $lineHeight: 1;
 $fontSize: 14px;
 
-// Color
+// Colors
 $black: #333;
 $darkGrey: #979797;
 $darkGrey: #bababa;
@@ -47,7 +47,6 @@ $smallTitle: 14px;
 
 // form-group
 $formFontFamily: 'Roboto', sans-serif;
-$formFW: 300;
 $formMargin: 8px;
 $formElementWidth: 155px;
 $formElementBorder: 1px solid #e3e3e3;
@@ -64,14 +63,22 @@ $inputFZ: 14px;
 // BTN
 
 $btnPadding: 10px 25px;
-$btnFontColor: #fff;
 $btnFontFamily: 'Roboto', sans-serif;
-$btnFW: 300;
 $btnFZ: 18px;
 $btnBorderRadius: 4px;
 
+
+// BTN Colors
+
+$btnFontColor: #fff;
 $btnGrey: #979797;
 $btnGreyHover: #bababa;
 $btnOrange: #f58220;
 $btnOrangeHover: #ffA200;
 $btnMutedBGColor: #e3e3e3;
+
+
+// table
+
+$tabeTrHover: #f1f3f3;
+$tableFontSize: 13px;

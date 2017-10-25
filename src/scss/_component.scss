@@ -24,11 +24,26 @@
   background-color: $headerBg;
 
   .cash {
+    position: relative;
     padding: 16px 18px 18px 18px;
     border-left: 1px solid $lightGrey;
     font-weight: $fontRegular;
     font-size: 20px;
     color: $darkGrey;
+
+    &.open {
+      background-color: $xsLightGrey;
+
+      .icon-arrow-down {
+        display: inline-block;
+        line-height: 0;
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+    }
 
     span {
       margin: 0 20px 0 15px;
@@ -37,6 +52,8 @@
     .icon-arrow-down {
       font-size: 12px;
     }
+
+
   }
 
   .notification {
@@ -203,6 +220,8 @@
 #aside {
 }
 
+// Добавить якорь на имени чувака
+
 /* ASIDE END */
 /* INPUT START */
 
@@ -237,13 +256,13 @@
     min-height: $textareaMinHeight;
     font-family: $formFontFamily;
     font-size: $textareaFZ;
-    font-weight: $formFW;
+    font-weight: $fontLight;
   }
 
   input {
     font-family: $formFontFamily;
     font-size: $inputFZ;
-    font-weight: $formFW;
+    font-weight: $fontLight;
   }
 }
 
@@ -259,6 +278,24 @@
   }
 }
 
+.pass-wrapper {
+  position: relative;
+
+  .icon-password {
+    position: absolute;
+    top: 22%;
+    left: 12px;
+    font-size: 20px;
+  }
+
+  input {
+    padding-left: 40px;
+
+  }
+}
+
+// Исправить состояния
+
 .form-wrapper {
   display: inline-block;
 }
@@ -269,13 +306,26 @@
 
 /* BTN Styles Start */
 
+.container {
+  margin: 0 auto;
+
+  &.sm {
+    max-width: 684px;
+  }
+}
+
+/* BTN Styles Start */
+
+
+/* BTN Styles Start */
+
 .btn-default {
   text-align: center;
   display: inline-block;
   padding: $btnPadding;
   color: $btnFontColor;
   font-family: $btnFontFamily;
-  font-weight: $btnFW;
+  font-weight: $fontLight;
   font-size: $btnFZ;
   border-radius: $btnBorderRadius;
 }
@@ -322,5 +372,103 @@
     border-bottom: 1px solid $lightGrey;
     padding: 18px;
   }
+  
+  .card-date {
+    padding: 30px 0;
+    border-bottom: 1px solid $lightGrey;
+  }
 }
 
+// date picker
+
+.datepicker-form {
+
+  .date-input-wrapper {
+    display: inline-block;
+    padding: 5px 0;
+    border: 1px solid $lightGrey;
+    border-radius: 3px;
+    color: $black;
+    margin-right: 12px;
+
+    input {
+      padding: 12px 16px;
+      vertical-align: middle;
+
+      &#to {
+        border-left: 1px solid $lightGrey;
+      }
+    }
+
+    label {
+      padding: 0 14px 0 10px;
+      vertical-align: middle;
+      display: inline-block;
+    }
+  }
+  
+  .btn-default {
+    vertical-align: middle;
+  }
+
+  // Сделать не дефалт а просто бтн для дефалта
+}
+
+//dropdown
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  padding: 10px 18px 24px;
+  background-color: $xsLightGrey;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+// tables
+
+.table {
+  font-size: $tableFontSize;
+  border-collapse: collapse;
+
+  tbody {
+
+    tr {
+      -webkit-transition: all .3s linear;
+      -moz-transition: all .3s linear;
+      -ms-transition: all .3s linear;
+      -o-transition: all .3s linear;
+      transition: all .3s linear;
+
+      &:hover {
+        background-color: $tabeTrHover;
+
+        .hide-icons {
+          opacity: 1;
+        }
+      }
+
+      &:last-child {
+
+        td {
+          border-bottom: 1px solid $lightGrey;
+        }
+      }
+    }
+  }
+
+  td {
+    padding: 18px;
+    border-top: 1px solid $lightGrey;
+
+    .hide-icons {
+      opacity: 0;
+      -webkit-transition: all .3s linear;
+      -moz-transition: all .3s linear;
+      -ms-transition: all .3s linear;
+      -o-transition: all .3s linear;
+      transition: all .3s linear;
+    }
+  }
+}
