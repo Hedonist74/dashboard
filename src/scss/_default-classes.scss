@@ -28,6 +28,7 @@
   position: fixed;
   z-index: 99;
   top: 0;
+  line-height: 0;
 }
 
 // text-color
@@ -36,7 +37,12 @@
 }
 
 .text-grey {
-  color: $darkGrey;
+  color: $mediumGrey;
+}
+
+.links-table {
+  font-size: $tableLinksFontSize;
+  color: $blue;
 }
 
 // text weight

@@ -104,8 +104,15 @@
   color: $blue;
 }
 
+.top-menu {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
 .top-menu:hover {
   background-color: $top-menu-hover-bgc;
+  cursor: pointer;
 }
 
 /* HEADER END */
@@ -158,13 +165,19 @@
         }
 
         a{
-          display: block;
+          //display: block;
           padding: 14px;
           border-left: 4px solid transparent;
+          display: flex;
+          align-items: center;
 
           [class*='icon-']{
             font-size: 17px;
             margin-right: 15px;
+          }
+
+          span {
+            margin-top: 2px;
           }
         }
         &:hover {
@@ -314,12 +327,10 @@
   }
 }
 
-/* BTN Styles Start */
-
 
 /* BTN Styles Start */
 
-.btn-default {
+.btn {
   text-align: center;
   display: inline-block;
   padding: $btnPadding;
@@ -330,24 +341,25 @@
   border-radius: $btnBorderRadius;
 }
 
-.btn-default.btn-grey {
+.btn.btn-grey {
   background-color: $btnGrey;
 }
 
-.btn-default.btn-grey:hover {
+.btn.btn-grey:hover {
   background-color: $btnGreyHover;
 }
 
-.btn-default.btn-orange {
+.btn.btn-orange {
   background-color: $btnOrange;
 }
 
-.btn-default.btn-orange:hover {
+.btn.btn-orange:hover {
   background-color: $btnOrangeHover;
 }
 
-.btn-default.btn-muted {
+.btn.btn-muted {
   background-color: $btnMutedBGColor;
+  cursor: default;
 }
 
 /* BTN Styles End */
@@ -376,6 +388,10 @@
   .card-date {
     padding: 30px 0;
     border-bottom: 1px solid $lightGrey;
+
+    .btn.btn-orange {
+      padding: 12px 13px;
+    }
   }
 }
 
@@ -404,14 +420,15 @@
       padding: 0 14px 0 10px;
       vertical-align: middle;
       display: inline-block;
+      line-height: 0;
     }
+
   }
   
-  .btn-default {
+  .btn.btn-orange {
     vertical-align: middle;
+    line-height: 0;
   }
-
-  // Сделать не дефалт а просто бтн для дефалта
 }
 
 //dropdown
@@ -435,11 +452,11 @@
   tbody {
 
     tr {
-      -webkit-transition: all .3s linear;
-      -moz-transition: all .3s linear;
-      -ms-transition: all .3s linear;
-      -o-transition: all .3s linear;
-      transition: all .3s linear;
+      -webkit-transition: all .2s linear;
+      -moz-transition: all .2s linear;
+      -ms-transition: all .2s linear;
+      -o-transition: all .2s linear;
+      transition: all .2s linear;
 
       &:hover {
         background-color: $tabeTrHover;
@@ -454,6 +471,10 @@
         td {
           border-bottom: 1px solid $lightGrey;
         }
+
+        td:first-child {
+          width: 290px;
+        }
       }
     }
   }
@@ -464,11 +485,16 @@
 
     .hide-icons {
       opacity: 0;
-      -webkit-transition: all .3s linear;
-      -moz-transition: all .3s linear;
-      -ms-transition: all .3s linear;
-      -o-transition: all .3s linear;
-      transition: all .3s linear;
+      -webkit-transition: all .1s linear;
+      -moz-transition: all .1s linear;
+      -ms-transition: all .1s linear;
+      -o-transition: all .1s linear;
+      transition: all .1s linear;
     }
   }
+}
+
+.btn-row {
+  padding-top: 25px;
+  padding-bottom: 25px;
 }

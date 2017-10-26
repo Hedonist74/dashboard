@@ -10,7 +10,8 @@ $fontSize: 14px;
 // Colors
 $black: #333;
 $darkGrey: #979797;
-$darkGrey: #bababa;
+$darkLightGrey: #bababa;
+$mediumGrey: #a6a6a6;
 $lightGrey: #e3e3e3;
 $xsLightGrey: #f5f5f5;
 $mutedGrey: #808080;
@@ -65,6 +66,7 @@ $inputFZ: 14px;
 $btnPadding: 10px 25px;
 $btnFontFamily: 'Roboto', sans-serif;
 $btnFZ: 18px;
+$btnFW: 300;
 $btnBorderRadius: 4px;
 
 
@@ -82,3 +84,4 @@ $btnMutedBGColor: #e3e3e3;
 
 $tabeTrHover: #f1f3f3;
 $tableFontSize: 13px;
+$tableLinksFontSize: 17px;
