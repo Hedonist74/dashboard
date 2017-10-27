@@ -8,6 +8,10 @@
   justify-content: space-between;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .justify-end {
   justify-content: flex-end;
 }
@@ -31,6 +35,10 @@
   line-height: 0;
 }
 
+.top-menu {
+  align-self: stretch;
+}
+
 // text-color
 .text-orange {
   color: $orange;
@@ -45,6 +53,14 @@
   color: $blue;
 }
 
+.drop-muted {
+  color: $lightMediumGrey;
+}
+
+.drop-black {
+  color: #000;
+}
+
 // text weight
 
 .text-bold {
@@ -53,6 +69,6 @@
 
 // width
 
-.full-width{
+.full-width {
   width: 100%;
 }

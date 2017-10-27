@@ -12,9 +12,11 @@ $black: #333;
 $darkGrey: #979797;
 $darkLightGrey: #bababa;
 $mediumGrey: #a6a6a6;
+$lightMediumGrey: #9c9c9c;
 $lightGrey: #e3e3e3;
 $xsLightGrey: #f5f5f5;
 $mutedGrey: #808080;
+
 
 $orange: #f58220;
 $orangeLight: #ffa200;
@@ -30,6 +32,9 @@ $blue: #56819f;
 // Header
 $headerBg: #fff;
 $top-menu-hover-bgc: #f5f5f2;
+
+// Dropdown
+$shadowDrop: 5px;
 
 // Aside
 $asideBg: #191919;
@@ -60,6 +65,7 @@ $formElementActiveColor: #333;
 $textareaMinHeight: 125px;
 $textareaFZ: 12px;
 $inputFZ: 14px;
+$errorBorder: 2px solid $red;
 
 // BTN
 

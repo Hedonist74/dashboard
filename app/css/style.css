@@ -196,6 +196,13 @@ button {
           justify-content: space-between;
 }
 
+.justify-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .justify-end {
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
@@ -221,6 +228,12 @@ button {
   line-height: 0;
 }
 
+.top-menu {
+  -webkit-align-self: stretch;
+      -ms-flex-item-align: stretch;
+          align-self: stretch;
+}
+
 .text-orange {
   color: #f58220;
 }
@@ -232,6 +245,14 @@ button {
 .links-table {
   font-size: 17px;
   color: #56819f;
+}
+
+.drop-muted {
+  color: #9c9c9c;
+}
+
+.drop-black {
+  color: #000;
 }
 
 .text-bold {
@@ -263,8 +284,9 @@ button {
 
 #header .cash {
   position: relative;
-  padding: 16px 18px 18px 18px;
+  padding: 18px 18px 18px 18px;
   border-left: 1px solid #e3e3e3;
+  border-right: 1px solid #e3e3e3;
   font-weight: 400;
   font-size: 20px;
   color: #979797;
@@ -292,7 +314,6 @@ button {
 
 #header .notification {
   padding: 18px;
-  border-left: 1px solid #e3e3e3;
   font-size: 20px;
   color: #979797;
 }
@@ -313,14 +334,19 @@ button {
 }
 
 #header .personal {
-  padding: 20px;
+  padding: 18px 18px 18px 18px;
   border-left: 1px solid #e3e3e3;
 }
 
 #header .personal .icon-profile {
   margin-right: 15px;
+  margin-bottom: 2px;
   font-size: 17px;
   color: #979797;
+}
+
+#header .personal:hover .profile-text, #header .personal:hover .aside-bottom .manager-name, .aside-bottom #header .personal:hover .manager-name {
+  color: #f58220;
 }
 
 #header .quit {
@@ -457,6 +483,10 @@ button {
   color: #808080;
 }
 
+.manager-name:hover {
+  color: #f58220;
+}
+
 /* ASIDE END */
 /* INPUT START */
 .form-group {
@@ -469,7 +499,7 @@ button {
   border: 1px solid #e3e3e3;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  color: #333;
+  color: #a6a6a6;
 }
 
 .form-group input ::-webkit-input-placeholder, .form-group textarea ::-webkit-input-placeholder {
@@ -535,12 +565,99 @@ button {
   font-weight: 300;
 }
 
-.form-group:hover input, .form-group:hover textarea {
-  border: 1px solid #b1b1b1;
+.form-group .icon-password {
+  color: #a6a6a6;
 }
 
-.form-group.error input, .form-group.error textarea {
+.form-control::-webkit-input-placeholder {
+  color: #a6a6a6;
+}
+
+.form-control::-moz-placeholder {
+  color: #a6a6a6;
+}
+
+.form-control:-moz-placeholder {
+  color: #a6a6a6;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #a6a6a6;
+}
+
+.form-control:hover::-webkit-input-placeholder {
   color: #333;
+}
+
+.form-control:hover::-moz-placeholder {
+  color: #333;
+}
+
+.form-control:hover:-moz-placeholder {
+  color: #333;
+}
+
+.form-control:hover:-ms-input-placeholder {
+  color: #333;
+}
+
+.form-control:focus::-webkit-input-placeholder {
+  color: #333;
+}
+
+.form-control:focus::-moz-placeholder {
+  color: #333;
+}
+
+.form-control:focus:-moz-placeholder {
+  color: #333;
+}
+
+.form-control:focus:-ms-input-placeholder {
+  color: #333;
+}
+
+input:focus::-webkit-input-placeholder .icon-password {
+  color: #333 !important;
+}
+
+input:focus::-moz-placeholder .icon-password {
+  color: #333 !important;
+}
+
+input:focus:-moz-placeholder .icon-password {
+  color: #333 !important;
+}
+
+input:focus:-ms-input-placeholder .icon-password {
+  color: #333 !important;
+}
+
+.form-group:hover .icon-password,
+.form-control:hover .icon-password {
+  color: #333;
+}
+
+.form-group:hover input, .form-group:hover textarea,
+.form-control:hover input,
+.form-control:hover textarea {
+  border: 1px solid #b1b1b1;
+  color: #333;
+}
+
+.form-control:focus + .icon-password {
+  color: #333;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid #b1b1b1;
+  color: #333;
+  outline: none;
+}
+
+input.form-control.error {
+  border: 2px solid #ff0000;
 }
 
 .pass-wrapper {
@@ -631,7 +748,8 @@ button {
 }
 
 .card .card-date {
-  padding: 30px 0;
+  padding-top: 33px;
+  padding-bottom: 36px;
   border-bottom: 1px solid #e3e3e3;
 }
 
@@ -665,6 +783,10 @@ button {
   line-height: 0;
 }
 
+.datepicker-form .date-input-wrapper label .icon-calendar {
+  color: #a6a6a6;
+}
+
 .datepicker-form .btn.btn-orange {
   vertical-align: middle;
   line-height: 0;
@@ -678,6 +800,56 @@ button {
   top: 100%;
   left: 0;
   right: 0;
+}
+
+.dropdown-menu li + li {
+  margin-top: 15px;
+}
+
+.dropdown-menu .dropdown-link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  width: 100%;
+  line-height: 1;
+}
+
+.dropdown-menu .dropdown-link span {
+  margin: 0 !important;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.dropdown-wrapper.open {
+  color: #000 !important;
+  border-left: 1px solid #e3e3e3;
+  border-right: 1px solid #e3e3e3;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-wrapper.open .dropdown-menu {
+  margin-left: -1px;
+  margin-right: -1px;
+  border-left: 1px solid #e3e3e3;
+  border-right: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-clip-path: inset(0px -10px -10px -10px);
+          clip-path: inset(0px -10px -10px -10px);
+}
+
+.dropdown-wrapper.open .icon-arrow-down {
+  color: #9c9c9c !important;
 }
 
 .table {
@@ -703,10 +875,6 @@ button {
   border-bottom: 1px solid #e3e3e3;
 }
 
-.table tbody tr:last-child td:first-child {
-  width: 290px;
-}
-
 .table td {
   padding: 18px;
   border-top: 1px solid #e3e3e3;
@@ -719,9 +887,148 @@ button {
   transition: all .1s linear;
 }
 
+.table td a:hover {
+  color: #f58220;
+}
+
+.table td i {
+  font-size: 16px;
+  color: #56819f;
+}
+
+.table td i:hover {
+  color: #f58220;
+  cursor: pointer;
+}
+
+.table td i + i {
+  padding-left: 20px;
+}
+
+.links .table tbody tr td:first-child {
+  width: 290px;
+}
+
 .btn-row {
   padding-top: 25px;
   padding-bottom: 25px;
+}
+
+.details,
+.payout {
+  margin-left: 17px;
+  margin-right: 17px;
+}
+
+.details table .table-sorting,
+.payout table .table-sorting {
+  text-align: left;
+}
+
+.details table .table-sorting th,
+.payout table .table-sorting th {
+  padding-left: 8px;
+  padding-top: 37px;
+  padding-bottom: 15px;
+}
+
+.details table .table-sorting:hover,
+.payout table .table-sorting:hover {
+  background-color: inherit;
+}
+
+.details table tr > td:hover,
+.payout table tr > td:hover {
+  cursor: pointer;
+}
+
+.payout table tr td:nth-child(-n+2) {
+  width: 33.33333%;
+}
+
+.payout table tr td:nth-child(3) {
+  width: 22.22222%;
+}
+
+.payout table tr td:last-child {
+  width: 11.11111%;
+}
+
+.btn-sort {
+  display: inline-block;
+  padding: 10px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  white-space: nowrap;
+  color: #a6a6a6;
+}
+
+.btn-sort .icon-arrow-down {
+  font-size: 8px;
+  margin-left: 15px;
+  margin-right: 8px;
+  opacity: 0;
+}
+
+.btn-sort > .icon-arrow-down:before {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.btn-sort:hover {
+  cursor: pointer;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+.btn-sort:hover .icon-arrow-down {
+  opacity: 1;
+  color: #a6a6a6;
+}
+
+.pagination {
+  font-size: 16px;
+  color: #56819f;
+  padding-top: 22px;
+  padding-bottom: 24px;
+}
+
+.pagination li {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.pagination li a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.pagination li .icon-arrow-left,
+.pagination li .icon-arrow-right {
+  font-size: 13px;
+  margin-bottom: -2px;
+}
+
+.pagination li:hover {
+  background-color: #f5f5f5;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  color: #a6a6a6;
+  font-weight: 700;
 }
 
 #main {

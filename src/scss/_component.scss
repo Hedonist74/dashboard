@@ -25,8 +25,9 @@
 
   .cash {
     position: relative;
-    padding: 16px 18px 18px 18px;
+    padding: 18px 18px 18px 18px;
     border-left: 1px solid $lightGrey;
+    border-right: 1px solid $lightGrey;
     font-weight: $fontRegular;
     font-size: 20px;
     color: $darkGrey;
@@ -58,7 +59,6 @@
 
   .notification {
     padding: 18px;
-    border-left: 1px solid $lightGrey;
     font-size: 20px;
     color: $darkGrey;
 
@@ -78,15 +78,23 @@
   }
 
   .personal {
-    padding: 20px;
+    padding: 18px 18px 18px 18px;
     border-left: 1px solid $lightGrey;
 
     .icon-profile {
       margin-right: 15px;
+      margin-bottom: 2px;
       font-size: 17px;
       color: $darkGrey;
     }
 
+  }
+
+  .personal:hover {
+
+    .profile-text {
+      color: $orange;
+    }
   }
 
   .quit {
@@ -230,6 +238,10 @@
 
 }
 
+.manager-name:hover {
+  color: $orange;
+}
+
 #aside {
 }
 
@@ -237,8 +249,6 @@
 
 /* ASIDE END */
 /* INPUT START */
-
-
 
 .form-group {
   margin: $formMargin;
@@ -250,7 +260,7 @@
     -webkit-border-radius: $formElementBorderRadius;
     -moz-border-radius: $formElementBorderRadius;
     border-radius: $formElementBorderRadius;
-    color: $formElementActiveColor;
+    color: $mediumGrey;
     ::-webkit-input-placeholder {color: $formElementColor;}
     ::-moz-placeholder          {color: $formElementColor;} // Firefox 19
     :-moz-placeholder           {color: $formElementColor;} // Firefox 18
@@ -277,18 +287,98 @@
     font-size: $inputFZ;
     font-weight: $fontLight;
   }
+
+  .icon-password {
+    color: $mediumGrey;
+  }
 }
 
-.form-group:hover {
+// idle placeholder
+
+.form-control::-webkit-input-placeholder       {
+  color: $mediumGrey;
+}
+.form-control::-moz-placeholder                {
+  color: $mediumGrey;
+}
+.form-control:-moz-placeholder                 {
+  color: $mediumGrey;
+}
+.form-control:-ms-input-placeholder            {
+  color: $mediumGrey;
+}
+
+// hover placeholder
+
+.form-control:hover::-webkit-input-placeholder {
+  color: $black;
+}
+.form-control:hover::-moz-placeholder          {
+  color: $black;
+}
+.form-control:hover:-moz-placeholder           {
+  color: $black;
+}
+.form-control:hover:-ms-input-placeholder      {
+  color: $black;
+}
+
+// focus placeholder
+
+.form-control:focus::-webkit-input-placeholder {
+  color: $black;
+}
+.form-control:focus::-moz-placeholder          {
+  color: $black;
+}
+.form-control:focus:-moz-placeholder           {
+  color: $black;
+}
+.form-control:focus:-ms-input-placeholder      {
+  color: $black;
+}
+
+// focus placeholder
+
+input:focus::-webkit-input-placeholder .icon-password {
+  color: $black !important;
+}
+input:focus::-moz-placeholder .icon-password          {
+  color: $black !important;
+}
+input:focus:-moz-placeholder .icon-password           {
+  color: $black !important;
+}
+input:focus:-ms-input-placeholder .icon-password      {
+  color: $black !important;
+}
+
+.form-group:hover,
+.form-control:hover {
+
+  .icon-password {
+    color: $black;
+  }
+
   input, textarea {
     border: $formElementActiveBorder;
+    color: $black;
   }
 }
 
-.form-group.error {
-  input, textarea {
-    color: $formElementActiveColor;
-  }
+.form-control:focus + .icon-password {
+  color: $black;
+}
+
+input:focus,
+textarea:focus {
+  border: $formElementActiveBorder;
+  color: $black;
+  outline: none;
+}
+
+input.form-control.error {
+  border: $errorBorder;
 }
 
 .pass-wrapper {
@@ -386,7 +476,8 @@
   }
   
   .card-date {
-    padding: 30px 0;
+    padding-top: 33px;
+    padding-bottom: 36px;
     border-bottom: 1px solid $lightGrey;
 
     .btn.btn-orange {
@@ -421,6 +512,10 @@
       vertical-align: middle;
       display: inline-block;
       line-height: 0;
+
+      .icon-calendar {
+        color: $mediumGrey;
+      }
     }
 
   }
@@ -441,6 +536,49 @@
   top: 100%;
   left: 0;
   right: 0;
+
+  li + li {
+    margin-top: 15px;
+  }
+
+  .dropdown-link {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+    line-height: 1;
+
+    span {
+      margin: 0 !important;
+      font-size: 12px;
+      font-weight: $fontMedium;
+    }
+  }
+}
+
+.dropdown-wrapper.open {
+  color: #000 !important;
+  border-left: 1px solid #e3e3e3;
+  border-right: 1px solid #e3e3e3;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+  -moz-box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+
+  .dropdown-menu {
+    margin-left: -1px;
+    margin-right: -1px;
+    border-left: 1px solid #e3e3e3;
+    border-right: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    clip-path: inset(0px -10px -10px -10px);
+  }
+
+  .icon-arrow-down {
+    color: $lightMediumGrey !important;
+  }
 }
 
 // tables
@@ -471,10 +609,6 @@
         td {
           border-bottom: 1px solid $lightGrey;
         }
-
-        td:first-child {
-          width: 290px;
-        }
       }
     }
   }
@@ -491,10 +625,174 @@
       -o-transition: all .1s linear;
       transition: all .1s linear;
     }
+
+    a:hover {
+      color: $orange;
+    }
+
+    i {
+      font-size: 16px;
+      color: $blue;
+    }
+
+    i:hover {
+      color: $orange;
+      cursor: pointer;
+    }
+
+    i + i {
+      padding-left: 20px;
+    }
+  }
+}
+
+.links {
+
+  .table {
+
+    tbody {
+
+      tr {
+
+        td:first-child {
+          width: 290px;
+        }
+      }
+    }
   }
 }
 
 .btn-row {
   padding-top: 25px;
   padding-bottom: 25px;
+}
+
+// payout + details + sort tables
+
+.details,
+.payout {
+  margin-left: 17px;
+  margin-right: 17px;
+
+  table {
+
+    .table-sorting {
+
+      text-align: left;
+
+      th {
+        padding-left: 8px;
+        padding-top: 37px;
+        padding-bottom: 15px;
+      }
+    }
+
+    .table-sorting:hover {
+      background-color: inherit;
+    }
+
+    tr > td:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.details {
+
+  table {
+
+  }
+}
+
+.payout {
+
+  table {
+
+    tr td:nth-child(-n+2) {
+      width: 33.33333%;
+    }
+
+    tr td:nth-child(3) {
+      width: 22.22222%;
+    }
+
+    tr td:last-child {
+      width: 11.11111%;
+    }
+  }
+}
+
+.btn-sort {
+  display: inline-block;
+  padding: 10px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  white-space: nowrap;
+  color: $mediumGrey;
+
+  .icon-arrow-down {
+    font-size: 8px;
+    margin-left: 15px;
+    margin-right: 8px;
+    opacity: 0;
+  }
+
+  & > .icon-arrow-down:before {
+
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+.btn-sort:hover {
+  cursor: pointer;
+  color: $black;
+  background-color: $xsLightGrey;
+
+  .icon-arrow-down {
+    opacity: 1;
+    color: $mediumGrey;
+  }
+}
+
+// pagination
+
+.pagination {
+  font-size: 16px;
+  color: $blue;
+  padding-top: 22px;
+  padding-bottom: 24px;
+
+  li {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .icon-arrow-left,
+    .icon-arrow-right {
+      font-size: 13px;
+      margin-bottom: -2px;
+    }
+  }
+
+  li:hover {
+    background-color: $xsLightGrey;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: $mediumGrey;
+    font-weight: $fontBold;
+  }
 }
