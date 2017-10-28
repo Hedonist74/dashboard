@@ -151,7 +151,7 @@
             <div class="card-body">
                 <div class="links">
                     <div class="btn-row text-center">
-                        <button class="btn btn-orange">+ Add new</button>
+                        <button class="btn btn-orange" data-modal data-target="#links">+ add new</button>
                     </div>
                     <div class="container sm">
                         <table class="table full-width">
@@ -258,7 +258,7 @@
                         </table>
                     </div>
                     <div class="btn-row text-center">
-                        <button class="btn btn-orange">+ Add new</button>
+                        <button class="btn btn-orange" data-modal data-target="#links">+ add new</button>
                     </div>
                 </div>
             </div>
@@ -268,9 +268,57 @@
 
 <!-- CARD BODY END -->
 
+<!-- MODALS START -->
+
+<div class="modal" id="links">
+    <div class="card-header">
+
+    </div>
+    <div class="card-body">
+        <div class="card-form">
+            <form>
+                <div class="select-group flex-container align-center">
+                    <div class="form-group">
+                        <label for="">Scheme name</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group align-self-end">
+                        <select name="" id="">
+                            <option value="">One</option>
+                            <option value="">Two</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Language</label>
+                        <select name="" id="">
+                            <option value="">USA</option>
+                            <option value="">RU</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- MODALS START -->
+
+<!-- PRE LOADER START -->
+<div id="loading">
+    <div id="loading-center">
+        <div id="loading-center-absolute">
+            <div id="object"></div>
+        </div>
+    </div>
+</div>
+
+<!-- PRE LOADER END -->
+
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/jquery.bpopup.min.js"></script>
+<script src="js/jquery.formstyler.min.js"></script>
 
 <!-- Init Plugins -->
 <script src="js/init.js"></script>

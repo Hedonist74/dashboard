@@ -30,4 +30,20 @@ $( function() {
 
         return date;
     }
+
+    // Modal init
+    var modalBtn = $('[data-modal]');
+
+    modalBtn.on('click', function(e){
+
+        e.preventDefault();
+        var target = $(this).attr('data-target');
+        $(target).bPopup();
+
+    })
+
+    // Form Element Styler init
+
+    $('select').styler();
+
 } );
