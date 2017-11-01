@@ -268,18 +268,19 @@
 
 .aside-bottom {
   padding-top: 25px;
+  padding-left: 18px;
   border-top: 1px solid $black;
 
   .manager-name {
     @extend .profile-text;
+    margin-left: 10px;
   }
 
   .your-manager {
-    padding-left: 18px;
     padding-top: 20px;
 
     img {
-      margin-right: 10px;
+      //margin-right: 10px;
     }
 
     .photo-condition {
@@ -293,7 +294,7 @@
       background-color: $green;
       position: absolute;
       top: 0;
-      left: 60%;
+      left: 70%;
     }
   }
 
@@ -306,6 +307,14 @@
     color: $mutedGrey;
   }
 
+}
+
+body._mobileSidebar .aside-bottom {
+  padding-left: 0;
+
+  .your-manager {
+    justify-content: center;
+  }
 }
 
 .manager-name:hover {
@@ -593,6 +602,10 @@ input.form-control.error {
       &#to {
         border-left: 1px solid $lightGrey;
       }
+    }
+
+    input:focus {
+      border: none;
     }
 
     label {
@@ -888,10 +901,81 @@ input.form-control.error {
 .modal {
   background-color: $modalBg;
   display: none;
+  position: relative;
 
   &#links {
     width: 70%;
     min-height: 100px;
   }
-  
+
+  .card-header {
+    border-bottom: 1px solid $lightGrey;
+    padding: 18px;
+  }
+
+  .card-form {
+    border-bottom: 1px solid $lightGrey;
+    padding: 18px;
+
+    .form-group {
+
+      label {
+        display: block;
+        font-weight: $fontBold;
+        color: $mediumGrey;
+        font-size: 16px;
+        padding-bottom: 15px;
+      }
+
+      input {
+        width: 100%;
+      }
+    }
+
+    .scheme-select {
+      width: 40%;
+    }
+
+    .compain-select {
+      width: 40%;
+    }
+  }
+
+  .modal-close-btn {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    height: 24px;
+    width: 15px;
+    top: 15px;
+    right: 30px;
+
+    span {
+      margin-right: -18px;
+    }
+
+    span:first-child {
+    display: inline-block;
+    height: 1px;
+    width: 15px;
+    background-color: #a6a6a6;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+    span:last-child {
+    display: inline-block;
+    height: 1px;
+    width: 16px;
+    background-color: #a6a6a6;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  }
 }
+    
