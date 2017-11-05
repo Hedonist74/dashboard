@@ -24,6 +24,14 @@
   align-self: flex-end;
 }
 
+.flex-grow {
+  flex-grow: 1;
+}
+
+.fb-40 {
+  flex-basis: 40%;
+}
+
 // text align
 
 .text-center {
@@ -65,6 +73,11 @@
   color: #000;
 }
 
+.warning {
+  color: #ff0000;
+  text-transform: uppercase;
+}
+
 // text weight
 
 .text-bold {
@@ -79,6 +92,6 @@
 
 // margin
 
-.ml-auto {
-  margin-left: auto;
+.mr-auto {
+  margin-right: auto;
 }

@@ -86,7 +86,7 @@
     margin: 0;
     padding: 0;
     position: absolute;
-    z-index: 10;
+    z-index: 9;
 }
 
 .scrollbar-inner > .scroll-element div {
@@ -131,7 +131,7 @@
 }
 
 .scrollbar-inner > .scroll-element .scroll-element_track { background-color: #e0e0e0; }
-.scrollbar-inner > .scroll-element .scroll-bar { background-color: #c2c2c2; }
+.scrollbar-inner > .scroll-element .scroll-bar { background-color: $black; }
 .scrollbar-inner > .scroll-element:hover .scroll-bar { background-color: #919191; }
 .scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar { background-color: #919191; }
 

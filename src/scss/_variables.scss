@@ -54,7 +54,7 @@ $smallTitle: 14px;
 
 // form-group
 $formFontFamily: 'Roboto', sans-serif;
-$formMargin: 8px;
+$formMargin: 15px;
 $formElementWidth: 155px;
 $formElementBorder: 1px solid #e3e3e3;
 $formElementErrorBorder: 1px solid #ff0000;
@@ -63,7 +63,8 @@ $formElementBorderRadius: 4px;
 $formElementPadding: 8px 12px;
 $formElementColor: #a6a6a6;
 $formElementActiveColor: #333;
-$textareaMinHeight: 125px;
+$textareaHeight: 185px;
+$textareaWidth: 500px;
 $textareaFZ: 12px;
 $inputFZ: 14px;
 $errorBorder: 2px solid $red;

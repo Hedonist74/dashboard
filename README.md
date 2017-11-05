@@ -171,3 +171,21 @@ gulp.task('clear', function () {
 gulp.task('default', ['watch']);
 
 ```"# dashboard" 
+
+
+    Use only:
+
+    # `WebStorm` + `GIT` + `GULP`_template + `SCSS`
+    # `jQuerry` + `jQuerry_UI`
+    # `Glyphter` icons
+    # `Canvas`
+    # `Flex`
+    # `bPopUp` pre-loader
+
+    JS_tasks:
+
+    # .date-picker-plug
+    # .modal-task
+    # .form-styler-plug
+    # .scrollbar-plug
+    # .chart-block (which use canvas)
