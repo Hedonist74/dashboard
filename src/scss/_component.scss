@@ -324,8 +324,6 @@ body._mobileSidebar .aside-bottom {
 #aside {
 }
 
-// Добавить якорь на имени чувака
-
 /* ASIDE END */
 /* INPUT START */
 
@@ -358,7 +356,7 @@ body._mobileSidebar .aside-bottom {
     font-size: $textareaFZ;
     font-weight: $fontLight;
     height: $textareaHeight;
-    width: $textareaWidth;
+    //width: $textareaWidth;
     resize: none;
   }
 
@@ -366,6 +364,7 @@ body._mobileSidebar .aside-bottom {
     font-family: $formFontFamily;
     font-size: $inputFZ;
     font-weight: $fontLight;
+    height: 40px;
   }
 
   .icon-password {
@@ -575,9 +574,23 @@ input.form-control.error {
     font-size: 20px;
   }
 
-  input {
-    padding-left: 40px;
+  input[password] {
+    padding-left: 40px; // here is custom value
+  }
+}
 
+.form-group {
+  position: relative;
+
+  .icon-password {
+    position: absolute;
+    top: 45%;
+    left: 67px;
+    font-size: 20px;
+  }
+
+  input[password] {
+    padding-left: 40px;
   }
 }
 
@@ -692,7 +705,7 @@ input.form-control.error {
   .card-form {
 
     .select-group {
-      padding: 18px;
+      //padding: 18px;
     }
 
     .form-group {
@@ -1132,3 +1145,114 @@ input.form-control.error {
   }
 }
     
+.options-wrap {
+
+  .check-status {
+    //width: 50%;
+  }
+}
+
+.textarea-group {
+
+  .form-group {
+
+    textarea {
+      width: 100%;
+    }
+  }
+}
+
+.options-wrap {
+  border-top: $formElementBorder;
+
+  .check-status {
+    padding: 21px 21px 21px 9px;
+  }
+
+  .checkboxes {
+    height: 200px;
+
+    .checkbox-group {
+      width: 100%;
+      padding-left: 12px;
+
+      &:hover {
+        background-color: $xsLightGrey;
+      }
+
+      label {
+        width: 100%;
+        height: 43px;
+      }
+    }
+  }
+
+  .section-title {
+    font-family: $fontFamily;
+    font-weight: $fontBold;
+    color: $mediumGrey;
+    font-size: 16px;
+    padding-bottom: 18px;
+  }
+
+  .range-slider {
+    border-left: $formElementBorder;
+  }
+}
+
+.button-buttom-wrapper {
+  padding: 20px 24px;
+  border-top: $formElementBorder;
+}
+
+.select-group {
+  padding: 25px 18px 40px;
+
+  .form-group + .form-group {
+    padding-left: 18px;
+  }
+}
+.card-form {
+
+  .subtitle {
+    padding: 35px 18px 25px;
+  }
+
+  .form-group {
+
+    label {
+      padding-bottom: 22px;
+      font-family: $fontFamily;
+      font-weight: $fontBold;
+      color: $mediumGrey;
+      font-size: 16px;
+    }
+  }
+}
+
+.personal-data {
+  border-bottom: $formElementBorder;
+  padding-top: 43px;
+  padding-bottom: 43px;
+  flex-direction: column;
+
+  .form-group {
+    //max-width: 455px;
+    flex-wrap: nowrap;
+
+    label {
+      flex: 1 0 auto;
+      flex-basis: 150px;
+      padding-bottom: 0; // убрать потом
+    }
+
+    input {
+      flex: 1 0 auto;
+      flex-basis: 310px;
+    }
+  }
+
+  .form-group + .form-group {
+    padding-top: 15px;
+  }
+}

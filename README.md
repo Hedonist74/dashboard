@@ -175,7 +175,7 @@ gulp.task('default', ['watch']);
 
     Use only:
 
-    # `WebStorm` + `GIT` + `GULP`_template + `SCSS`
+    # `WebStorm` + `GIT` + `NPM` + `GULP`template + `SCSS`
     # `jQuerry` + `jQuerry_UI`
     # `Glyphter` icons
     # `Canvas`

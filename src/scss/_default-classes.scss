@@ -28,8 +28,20 @@
   flex-grow: 1;
 }
 
+.fb-33 {
+  flex-basis: 33.3333%;
+}
+
 .fb-40 {
   flex-basis: 40%;
+}
+
+.fb-50 {
+  flex-basis: 50%;
+}
+
+.fb-0 {
+  flex-basis: 0;
 }
 
 // text align
@@ -76,6 +88,8 @@
 .warning {
   color: #ff0000;
   text-transform: uppercase;
+  font-family: $fontFamily;
+  font-weight: $fontBold;
 }
 
 // text weight
@@ -94,4 +108,34 @@
 
 .mr-auto {
   margin-right: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+// padding-margin
+
+.pad-rl-9 {
+  padding-right: 9px;
+  padding-left: 9px;
+}
+
+.pad-rl-18 {
+  padding-right: 18px;
+  padding-left: 18px;
+}
+
+.pad-tb-13 {
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.pad-tb-30 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.mr-8 {
+  margin-right: 8px;
 }

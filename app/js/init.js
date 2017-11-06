@@ -1,38 +1,5 @@
 $( function() {
 
-    // range slider init
-
-    // $("#slider").slider({
-    //     values:[1,1],
-    //     min:0,
-    //     max:5,
-    //     slide: function(event, ui) {
-    //         $(ui.handle).text(ui.value);
-    //     },
-    //     start: function( event, ui ) {
-    //         if($(ui.handle).hasClass('stay'))
-    //             return false;
-    //     }
-    // });
-    // var value = $("#slider-range").slider("values",0);
-    // $("#slider-range").find(".ui-slider-handle").text(value);
-    // $('#slider .ui-slider-handle:last').addClass('stay');
-
-
-    $( function() {
-        $( "#slider-range" ).slider({
-            range: true,
-            min: 0,
-            max: 168,
-            values: [ 0, 168 ],
-            slide: function( event, ui ) {
-                $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-            }
-        });
-        $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-            " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-    } );
-
     // datepicker init
     var dateFormat = "mm/dd/yy",
         from = $( "#from" )
@@ -87,7 +54,7 @@ $( function() {
 
     // chart init
 
-    var chartBlock = document.getElementById('myChart');
+        var chartBlock = document.getElementById('myChart');
     if( chartBlock ){
         var myChart = new Chart(chartBlock, {
             type: 'bar',

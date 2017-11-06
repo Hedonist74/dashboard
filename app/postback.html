@@ -10,10 +10,6 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-    <!-- range slider jquerry -->
-
-    <link rel="stylesheet" href="css/range-slider.jquerry.css">
-
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -152,22 +148,22 @@
             </div>
             <div class="card-body">
                 <div class="card-form">
-                    <span class="subtitle">You can insert some parameters in this postback</span>
-                    <div class="textarea-group flex-container">
-                        <div class="form-group align-self-end flex-grow">
+                    <p class="subtitle">You can insert some parameters in this postback</p>
+                    <div class="textarea-group flex-container justify-sb pad-rl-9">
+                        <div class="form-group align-self-end flex-grow fb-50 pad-rl-9">
                             <label for="">Sign Up</label>
                             <textarea name="" placeholder="">crm_userId =%user_id%
 subid =%p%</textarea>
                         </div>
-                        <div class="form-group align-self-end flex-grow">
+                        <div class="form-group align-self-end flex-grow fb-50 pad-rl-9">
                             <label for="">Deposit</label>
                             <textarea name="" placeholder="">crm_userId =%user_id%
 subid =%p%</textarea>
                         </div>
                     </div>
 
-                    <div class="select-group flex-container align-center justify-sb">
-                        <div class="form-group align-self-end flex-grow">
+                    <div class="select-group flex-container justify-sb">
+                        <div class="form-group flex-grow fb-0">
                             <label for="">Postback type</label>
                             <select name="">
                                 <option value="">S2S (http://..)</option>
@@ -176,7 +172,7 @@ subid =%p%</textarea>
                                 <option value="">Four (http://..)</option>
                             </select>
                         </div>
-                        <div class="form-group design-select align-self-end flex-grow">
+                        <div class="form-group flex-grow fb-0">
                             <label for="">To countries</label>
                             <select name="">
                                 <option value="">Select countries</option>
@@ -185,7 +181,7 @@ subid =%p%</textarea>
                                 <option value="">Four</option>
                             </select>
                         </div>
-                        <div class="form-group align-self-end flex-grow">
+                        <div class="form-group flex-grow fb-0">
                             <label for="">Sending options:</label>
                             <select name="">
                                 <option value="">Select</option>
@@ -198,59 +194,66 @@ subid =%p%</textarea>
 
                     <!-- Select Group End -->
 
-                    <div class="checkbox-wrap">
-                        <h3 class="section-title"><span class="warning">Not</span> send statuses</h3>
-                        <div class="checkboxes flex-container scrollbar-inner">
-                            <div class="checkbox-group flex-container align-center">
-                                <input type="checkbox" name="link83" id="link83">
-                                <label for="link83" class="flex-container align-center">poker Money random text</label>
-                                <a href="" class="mr-auto">
-                                    <i class="icon-show"></i>
-                                </a>
-                            </div>
-                            <div class="checkbox-group flex-container align-center">
-                                <input type="checkbox" name="link84" id="link84">
-                                <label for="link84" class="flex-container align-center">poker Money random text</label>
-                                <a href="" class="mr-auto">
-                                    <i class="icon-show"></i>
-                                </a>
-                            </div>
-                            <div class="checkbox-group flex-container align-center">
-                                <input type="checkbox" name="link85" id="link85">
-                                <label for="link85" class="flex-container align-center">poker Money random text</label>
-                                <a href="" class="mr-auto">
-                                    <i class="icon-show"></i>
-                                </a>
-                            </div>
-                            <div class="checkbox-group flex-container align-center">
-                                <input type="checkbox" name="link86" id="link86">
-                                <label for="link86" class="flex-container align-center">poker Money random text</label>
-                                <a href="" class="mr-auto">
-                                    <i class="icon-show"></i>
-                                </a>
-                            </div>
-                            <div class="checkbox-group flex-container align-center">
-                                <input type="checkbox" name="link87" id="link87">
-                                <label for="link87" class="flex-container align-center">poker Money random text</label>
-                                <a href="" class="mr-auto">
-                                    <i class="icon-show"></i>
-                                </a>
+                    <div class="options-wrap flex-container pad-rl-9">
+                        <div class="check-status flex-grow fb-50 pad-rl-9">
+                            <h3 class="section-title"><span class="warning">Not</span> send statuses</h3>
+                            <div class="checkboxes flex-container scrollbar-inner">
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link83" id="link83">
+                                    <label for="link83" class="flex-container align-center">checkNumber</label>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link84" id="link84">
+                                    <label for="link84" class="flex-container align-center">noAnswer</label>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link85" id="link85">
+                                    <label for="link85" class="flex-container align-center">noCall</label>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link86" id="link86">
+                                    <label for="link86" class="flex-container align-center">callAgain</label>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link87" id="link87">
+                                    <label for="link87" class="flex-container align-center">checkNumber</label>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link88" id="link88">
+                                    <label for="link88" class="flex-container align-center">noAnswer</label>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link89" id="link89">
+                                    <label for="link89" class="flex-container align-center">noCall</label>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link90" id="link90">
+                                    <label for="link90" class="flex-container align-center">callAgain</label>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link91" id="link91">
+                                    <label for="link91" class="flex-container align-center">poker Money random text</label>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link92" id="link92">
+                                    <label for="link92" class="flex-container align-center">poker Money random text</label>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link93" id="link93">
+                                    <label for="link93" class="flex-container align-center">poker Money random text</label>
+                                </div>
                             </div>
                         </div>
+                        <div class="range-slider flex-grow fb-50 pad-rl-9">Range Slider Here</div>
                     </div>
 
-                    <p>
-                        <label for="amount">Price range:</label>
-                        <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-                    </p>
-
-                    <div id="slider-range">
-                        <div id="custom-handle" class="ui-slider-handle"></div>
+                    <div class="button-buttom-wrapper flex-container">
+                        <button class="btn btn-orange ml-auto">Create Pixel</button>
                     </div>
 
                     <!-- Generate links Start-->
 
-                    <button class="btn btn-orange mr-auto">Create Pixel</button>
+
 
                     <!-- Generate links End-->
 
