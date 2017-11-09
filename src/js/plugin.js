@@ -1,6 +1,6 @@
 ;(function ($){
 
-    // dropdown
+    // dropdown `cash`
     var dropdownWrapper = $('.dropdown-wrapper');
 
     dropdownWrapper.on('click', function (e) {
@@ -8,6 +8,17 @@
         var target = $(this).find('.dropdown-menu');
         target.slideToggle();
         $(this).toggleClass('open');
+    });
+
+    // dropdown `notification`
+    var notificationWrapper = $('.notification-wrapper');
+
+    notificationWrapper.on('click', function (e) {
+        e.preventDefault();
+        var target = $(this).find('.notification-menu');
+        target.slideToggle();
+        $(this).toggleClass('open');
+        // $('.personal').toggleClass('hide');
     });
 
     // toggle sidebar menu

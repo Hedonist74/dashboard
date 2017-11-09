@@ -24,6 +24,11 @@
             <span>$1,500,00</span>
             <i class="icon-arrow-down"></i>
             <div class="dropdown-menu">
+                <div class="top-wallet flex-container align-center">
+                    <i class="icon-wallet"></i>
+                    <span>$1,500,00</span>
+                    <i class="icon-arrow-down"></i>
+                </div>
                 <ul>
                     <li><a href="#" class="dropdown-link">
                         <span class="drop-muted">CPA</span>
@@ -44,10 +49,25 @@
                 </ul>
             </div>
         </div>
-        <div class="notification top-menu">
+        <div class="notification notification-wrapper top-menu">
             <div class="notification-condition">
                 <i class="icon-notification"></i>
                 <span class="notification-circle"></span>
+            </div>
+            <div class="notification-menu">
+                <div class="notification-condition">
+                    <i class="icon-notification"></i>
+                </div>
+                <ul>
+                    <li>
+                        <a href="#">You’ve got 100 signups</a>
+                        <span class="notification-circle"></span>
+                    </li>
+                    <li>
+                        <a href="#">Banner 03 don’t work</a>
+                        <span class="notification-circle"></span>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="personal top-menu">
@@ -99,7 +119,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="banners.html">
                     <i class="icon-banners"></i>
                     <span>Banners</span>
                 </a>
@@ -152,12 +172,12 @@
                     <div class="textarea-group flex-container justify-sb pad-rl-9">
                         <div class="form-group align-self-end flex-grow fb-50 pad-rl-9">
                             <label for="">Sign Up</label>
-                            <textarea name="" placeholder="">crm_userId =%user_id%
+                            <textarea name="" placeholder="" readonly>crm_userId =%user_id%
 subid =%p%</textarea>
                         </div>
                         <div class="form-group align-self-end flex-grow fb-50 pad-rl-9">
                             <label for="">Deposit</label>
-                            <textarea name="" placeholder="">crm_userId =%user_id%
+                            <textarea name="" placeholder="" readonly>crm_userId =%user_id%
 subid =%p%</textarea>
                         </div>
                     </div>
@@ -244,7 +264,16 @@ subid =%p%</textarea>
                                 </div>
                             </div>
                         </div>
-                        <div class="range-slider flex-grow fb-50 pad-rl-9">Range Slider Here</div>
+                        <div class="range-slider flex-grow fb-50">
+                            <span class="section-title">Send after:</span>
+                            <div class="min-max flex-container justify-sb">
+                                <span class="min">0</span>
+                                <span class="max">168</span>
+                            </div>
+                            <div id="slider">
+                                <div id="custom-handle" class="ui-slider-handle"></div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="button-buttom-wrapper flex-container">

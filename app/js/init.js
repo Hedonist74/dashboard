@@ -42,7 +42,7 @@ $( function() {
             closeClass: 'close',
             amsl: 0
         });
-    })
+    });
 
     // Form Element Styler init
 
@@ -52,11 +52,34 @@ $( function() {
 
     $('.scrollbar-inner').scrollbar();
 
-    // chart init
+    // range-slider init
+    var handle = $('#custom-handle');
+    var range = $('#slider');
 
-        var chartBlock = document.getElementById('myChart');
-    if( chartBlock ){
-        var myChart = new Chart(chartBlock, {
+    range.slider({
+        value: 50,
+        orientaion: 'horizontal',
+        range: 'min',
+        animate: true,
+        max: 200,
+
+        create: function(event, ui) {
+            handle.append('<span class="value">'+$( this ).slider( "value" )+'&nbsp;'+'hours</span>');
+            var value = handle.find('.value');
+            range.slider('option', 'valueSpan', value);
+        },
+        slide: function( event, ui ) {
+            range.slider( "option", "valueSpan").text(ui.value + '\u00A0'+'hours');
+        }
+    });
+
+    console.log(handle, range);
+
+    // chart init
+    var ctx = document.getElementById('myChart');
+
+    if(ctx){
+        var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: ['01', '02', '03', '04', '05', '06', '07', '08', '09'],
@@ -86,6 +109,9 @@ $( function() {
                             beginAtZero:true
                         }
                     }]
+                },
+                legend: {
+                    display: true,
                 }
             }
         })

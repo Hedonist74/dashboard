@@ -152,13 +152,13 @@ gulp.task('watch', ['browser-sync', 'css', 'scripts', 'sprite', 'sass'], functio
     gulp.watch('app/js/**/*.js', ['scripts']);   // Наблюдение за JS файлами в папке js
 });
 
-gulp.task('img', function() {
-    return gulp.src('src/img/**/*') // Берем все изображения из app
         .pipe(cache(imagemin({  // Сжимаем их с наилучшими настройками с учетом кеширования
             interlaced: true,
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()]
+            use: [pngquagulp.task('img', function() {
+                            return gulp.src('src/img/**/*') // Берем все изображения из app
+nt()]
         })))
         .pipe(gulp.dest('app/img')); // Выгружаем на продакшен
 });

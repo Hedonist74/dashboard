@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Links</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<!--HEADER START-->
+
+<header id="header" class="fixed-to-top">
+    <div class="flex-container justify-end align-center">
+        <div class="cash dropdown-wrapper top-menu">
+            <i class="icon-wallet"></i>
+            <span>$1,500,00</span>
+            <i class="icon-arrow-down"></i>
+            <div class="dropdown-menu">
+                <div class="top-wallet flex-container align-center">
+                    <i class="icon-wallet"></i>
+                    <span>$1,500,00</span>
+                    <i class="icon-arrow-down"></i>
+                </div>
+                <ul>
+                    <li><a href="#" class="dropdown-link">
+                        <span class="drop-muted">CPA</span>
+                        <span class="drop-black">$1000</span>
+                    </a></li>
+                    <li><a href="#" class="dropdown-link">
+                        <span class="drop-muted">CPL</span>
+                        <span class="drop-black">$1100</span>
+                    </a></li>
+                    <li><a href="#" class="dropdown-link">
+                        <span class="drop-muted">Turnover</span>
+                        <span class="drop-black">$1030</span>
+                    </a></li>
+                    <li><a href="#" class="dropdown-link">
+                        <span class="drop-muted">Net deposit</span>
+                        <span class="drop-black">$1000</span>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="notification notification-wrapper top-menu">
+            <div class="notification-condition">
+                <i class="icon-notification"></i>
+                <span class="notification-circle"></span>
+            </div>
+            <div class="notification-menu">
+                <div class="notification-condition">
+                    <i class="icon-notification"></i>
+                </div>
+                <ul>
+                    <li>
+                        <a href="#">You’ve got 100 signups</a>
+                        <span class="notification-circle"></span>
+                    </li>
+                    <li>
+                        <a href="#">Banner 03 don’t work</a>
+                        <span class="notification-circle"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="personal top-menu">
+            <i class="icon-profile"></i>
+            <span class="profile-text">Leonardo Dicaprio</span>
+        </div>
+        <div class="quit top-menu">
+            <i class="icon-quit"></i>
+        </div>
+    </div>
+</header>
+
+<!--HEADER END-->
+
+<!--ASIDE START-->
+
+<aside id="aside" class="fixed-to-top">
+    <div class="menu-control align-center flex-container justify-sb">
+        <div class="logo">
+            <a href="#">
+                <img src="img/logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!--/menu control-->
+    <div class="aside-menu">
+        <ul>
+            <li>
+                <a href="index.html">
+                    <i class="icon-general"></i>
+                    <span>General</span>
+                </a>
+            </li>
+            <li>
+                <a href="details.html">
+                    <i class="icon-details"></i>
+                    <span>Details</span>
+                </a>
+            </li>
+            <li>
+                <a href="links.html">
+                    <i class="icon-links"></i>
+                    <span>Links</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="banners.html">
+                    <i class="icon-banners"></i>
+                    <span>Banners</span>
+                </a>
+            </li>
+            <li>
+                <a href="personal-data.html">
+                    <i class="icon-personaldata"></i>
+                    <span>Personal Data</span>
+                </a>
+            </li>
+            <li>
+                <a href="payout.html">
+                    <i class="icon-payout"></i>
+                    <span>Payout</span>
+                </a>
+            </li>
+            <li>
+                <a href="postback.html">
+                    <i class="icon-postback"></i>
+                    <span>Postback</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="aside-bottom">
+        <span>Your Manager</span>
+        <div class="your-manager flex-container align-center">
+            <div class="photo-condition">
+                <img src="img/your-manager.png" alt="Manager">
+                <span class="circle"></span>
+            </div>
+            <span class="manager-name"><a href="#">Mikhael E.</a></span>
+        </div>
+    </div>
+</aside>
+
+<!--ASIDE END-->
+
+<!-- CARD START -->
+
+<main id="main">
+    <div class="content-wrapper">
+        <div class="card banners">
+            <div class="card-header flex-container justify-sb">
+                <span class="page-title">Add Banners</span>
+            </div>
+            <div class="card-body">
+                <div class="card-form">
+
+                    <!-- Select Group Start -->
+
+                    <form>
+                        <div class="select-group scheme-select flex-container align-center justify-sb">
+                            <div class="form-group flex-grow fb-40">
+                                <label for="">Scheme name</label>
+                                <input type="text" class="form-control" placeholder="Name">
+                            </div>
+                            <div class="form-group compain-select fb-40 align-self-end flex-grow">
+                                <label for="">Compain</label>
+                                <select name="" id="">
+                                    <option value="">Select</option>
+                                    <option value="">Two</option>
+                                    <option value="">Three</option>
+                                    <option value="">Four</option>
+                                </select>
+                            </div>
+                            <div class="form-group lang-select">
+                                <label for="">Language</label>
+                                <select name="" id="flags">
+                                    <option class="flag flag-gb" value="">EN</option>
+                                    <option class="flag flag-de" value="">DE</option>
+                                    <option class="flag flag-ru" value="">RU</option>
+                                    <option class="flag flag-fr" value="">FR</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="select-group flex-container align-center justify-sb">
+                            <div class="form-group align-self-end flex-grow">
+                                <label for="">Weight-Height</label>
+                                <select name="" id="">
+                                    <option value="">Select</option>
+                                    <option value="">Two</option>
+                                    <option value="">Three</option>
+                                    <option value="">Four</option>
+                                </select>
+                            </div>
+                            <div class="form-group design-select align-self-end flex-grow">
+                                <label for="">Design</label>
+                                <select name="" id="">
+                                    <option value="">Select</option>
+                                    <option value="">Two</option>
+                                    <option value="">Three</option>
+                                    <option value="">Four</option>
+                                </select>
+                            </div>
+                            <div class="form-group align-self-end flex-grow">
+                                <label for="">File type</label>
+                                <select name="" id="">
+                                    <option value="">All</option>
+                                    <option value="">Two</option>
+                                    <option value="">Three</option>
+                                    <option value="">Four</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Select Group End -->
+
+                    <!-- Checkbox Wrap Start -->
+
+                    <form class="select-form flex-container align-center">
+                        <div class="checkbox-wrap">
+                            <h3 class="section-title">Select banners</h3>
+                            <div class="checkboxes flex-container scrollbar-inner">
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link46" id="link46">
+                                    <label for="link46" class="flex-container align-center">random text Money site</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link47" id="link47">
+                                    <label for="link47" class="flex-container align-center">poker random text site</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link48" id="link48">
+                                    <label for="link48" class="flex-container align-center">poker Money random text</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link49" id="link49">
+                                    <label for="link49" class="flex-container align-center">random text Money site</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link50" id="link50">
+                                    <label for="link50" class="flex-container align-center">poker random text site</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link51" id="link51">
+                                    <label for="link51" class="flex-container align-center">poker Money random text</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link52" id="link52">
+                                    <label for="link52" class="flex-container align-center">random text Money site</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link53" id="link53">
+                                    <label for="link53" class="flex-container align-center">poker random text site</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link54" id="link54">
+                                    <label for="link54" class="flex-container align-center">poker Money random text</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link55" id="link55">
+                                    <label for="link55" class="flex-container align-center">random text Money site</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link56" id="link56">
+                                    <label for="link56" class="flex-container align-center">poker random text site</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link57" id="link57">
+                                    <label for="link57" class="flex-container align-center">poker Money random text</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link58" id="link58">
+                                    <label for="link58" class="flex-container align-center">random text Money site</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link59" id="link59">
+                                    <label for="link59" class="flex-container align-center">poker random text site</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link60" id="link60">
+                                    <label for="link60" class="flex-container align-center">poker Money random text</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link61" id="link61">
+                                    <label for="link61" class="flex-container align-center">random text Money site</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link62" id="link62">
+                                    <label for="link62" class="flex-container align-center">poker random text site</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link63" id="link63">
+                                    <label for="link63" class="flex-container align-center">poker Money random text</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link64" id="link64">
+                                    <label for="link64" class="flex-container align-center">random text Money site</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link65" id="link65">
+                                    <label for="link65" class="flex-container align-center">poker random text site</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkbox-wrap">
+                            <h3 class="section-title">Select websites</h3>
+                            <div class="checkboxes flex-container scrollbar-inner">
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link66" id="link66">
+                                    <label for="link66" class="flex-container align-center">poker Money random text</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link67" id="link67">
+                                    <label for="link67" class="flex-container align-center">random text Money site</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link68" id="link68">
+                                    <label for="link68" class="flex-container align-center">poker random text site</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link69" id="link69">
+                                    <label for="link69" class="flex-container align-center">poker Money random text</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link70" id="link70">
+                                    <label for="link70" class="flex-container align-center">random text Money site</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link71" id="link71">
+                                    <label for="link71" class="flex-container align-center">poker random text site</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link72" id="link72">
+                                    <label for="link72" class="flex-container align-center">poker Money random text</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link73" id="link73">
+                                    <label for="link73" class="flex-container align-center">random text Money site</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link74" id="link74">
+                                    <label for="link74" class="flex-container align-center">poker random text site</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link75" id="link75">
+                                    <label for="link75" class="flex-container align-center">poker Money random text</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link76" id="link76">
+                                    <label for="link76" class="flex-container align-center">random text Money site</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link77" id="link77">
+                                    <label for="link77" class="flex-container align-center">poker random text site</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link78" id="link78">
+                                    <label for="link78" class="flex-container align-center">poker Money random text</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link79" id="link79">
+                                    <label for="link79" class="flex-container align-center">random text Money site</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link80" id="link80">
+                                    <label for="link80" class="flex-container align-center">poker random text site</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link81" id="link81">
+                                    <label for="link81" class="flex-container align-center">poker Money random text</label>
+                                    <a href="" class="mr-auto">
+                                        <i class="icon-show"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Checkbox Wrap End -->
+
+                    <!-- Generate links Start-->
+
+                    <form>
+                        <div class="generate-links flex-container align-center">
+                            <div class="form-group flex-grow">
+                                <input type="text" name="" id="" class="form-control" placeholder="Generated link">
+                            </div>
+                            <button class="btn btn-idle"><i class="icon-links"></i> Copy link</button>
+                            <button class="btn btn-orange">Save</button>
+                        </div>
+                    </form>
+
+                    <!-- Generate links End-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- CARD BODY END -->
+
+<!-- PRE LOADER START -->
+<div id="loading">
+    <div id="loading-center">
+        <div id="loading-center-absolute">
+            <div id="object"></div>
+        </div>
+    </div>
+</div>
+
+<!-- PRE LOADER END -->
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+<script src="js/jquery.bpopup.min.js"></script>
+<script src="js/jquery.formstyler.min.js"></script>
+<script src="js/jquery.scrollbar.js"></script>
+
+
+<!-- Init Plugins -->
+<script src="js/init.js"></script>
+
+<script src="js/plugins.min.js"></script>
+
+
+</body>
+</html>
