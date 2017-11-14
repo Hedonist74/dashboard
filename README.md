@@ -38,6 +38,7 @@
 
 ```scss
 // Font
+
 $fontFamily: 'Roboto', sans-serif;
 $fontLight: 300;
 $fontRegular: 400;
@@ -47,6 +48,7 @@ $lineHeight: 1;
 $fontSize: 14px;
 
 // Colors
+
 $black: #333;
 $darkGrey: #979797;
 $darkLightGrey: #bababa;
@@ -56,42 +58,45 @@ $lightGrey: #e3e3e3;
 $xsLightGrey: #f5f5f5;
 $mutedGrey: #808080;
 
-
 $orange: #f58220;
 $orangeLight: #ffa200;
 $green: #04ae00;
 $lightGreen: #74b67a;
 $xsLightGreen: #96cc9b;
-
 $red: #ff0000;
 $pink: #de5252;
 $lightPink: #ec7171;
 $blue: #56819f;
 
-// Header
+// HEADER
+
 $headerBg: #fff;
 $top-menu-hover-bgc: #f5f5f2;
 
-// Dropdown
+// DROPDOWN
+
 $shadowDrop: 5px;
 
-// Aside
+// ASIDE
+
 $asideBg: #191919;
 $asideWidth: 188px;
 $activeLinkBg: #282828;
 $activeLinkColor: #fff;
 $asideMobileWidth: 60px;
 
-// Card
+// CARD
 
 $cardBg: #fff;
 
-// title
+// TITLE
+
 $titleColor: #a6a6a6;
 $titleFontSize: 16px;
 $smallTitle: 14px;
 
-// form-group
+// FORM-GROUP
+
 $formFontFamily: 'Roboto', sans-serif;
 $formMargin: 15px;
 $formElementWidth: 155px;
@@ -116,7 +121,6 @@ $btnFZ: 18px;
 $btnFW: 300;
 $btnBorderRadius: 4px;
 
-
 // BTN Colors
 
 $btnFontColor: #fff;
@@ -126,14 +130,14 @@ $btnOrange: #f58220;
 $btnOrangeHover: #ffA200;
 $btnMutedBGColor: #e3e3e3;
 
-
-// table
+// TABLE
 
 $tabeTrHover: #f1f3f3;
 $tableFontSize: 13px;
 $tableLinksFontSize: 17px;
 
-// Modal
+// MODAL
+
 $modalBg: #fff;
 ```
 
