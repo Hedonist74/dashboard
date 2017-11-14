@@ -1,13 +1,13 @@
 // PRE LOADER
 
-#loading{
+#loading {
   background-color: #bd4932;
   height: 100%;
   width: 100%;
   position: fixed;
   z-index: 101;
-  margin-top: 0px;
-  top: 0px;
+  margin-top: 0;
+  top: 0;
   -webkit-transition: opacity .3s linear, z-index .1s linear .3s;
   -moz-transition: opacity .3s linear, z-index .1s linear .3s;
   -ms-transition: opacity .3s linear, z-index .1s linear .3s;
@@ -24,7 +24,7 @@
   display: none !important;
 }
 
-#loading-center{
+#loading-center {
   width: 100%;
   height: 100%;
   position: relative;
@@ -40,7 +40,7 @@
   margin-left: -100px;
 }
 
-#object{
+#object {
   width: 80px;
   height: 80px;
   background-color: #FFF;
@@ -276,7 +276,6 @@
         }
 
         a{
-          //display: block;
           padding: 14px;
           border-left: 4px solid transparent;
           display: flex;
@@ -311,10 +310,6 @@
 
   .your-manager {
     padding-top: 20px;
-
-    img {
-      //margin-right: 10px;
-    }
 
     .photo-condition {
       position: relative;
@@ -354,9 +349,6 @@ body._mobileSidebar .aside-bottom {
   color: $orange;
 }
 
-#aside {
-}
-
 /* ASIDE END */
 /* INPUT START */
 
@@ -375,6 +367,7 @@ body._mobileSidebar .aside-bottom {
     :-moz-placeholder           {color: $formElementColor;} // Firefox 18
     :-ms-input-placeholder      {color: $formElementColor;}
   }
+
   input[placeholder]          {text-overflow: ellipsis;}
   input::-moz-placeholder     {text-overflow: ellipsis;}
   input:-moz-placeholder      {text-overflow: ellipsis;}
@@ -389,7 +382,6 @@ body._mobileSidebar .aside-bottom {
     font-size: $textareaFZ;
     font-weight: $fontLight;
     height: $textareaHeight;
-    //width: $textareaWidth;
     resize: none;
   }
 
@@ -405,7 +397,7 @@ body._mobileSidebar .aside-bottom {
   }
 }
 
-// range slider
+// RANGESLIDER
 
 #custom-handle {
   width: 3em;
@@ -416,7 +408,7 @@ body._mobileSidebar .aside-bottom {
   line-height: 1.6em;
 }
 
-// select
+// SELECT
 
 .flag.flag-gb {
   background: url(../img/gb.png) no-repeat;
@@ -435,7 +427,7 @@ body._mobileSidebar .aside-bottom {
   background-position: 15px;
 }
 
-// checkboxes
+// CHECKBOXES
 
 input[type="checkbox"]{
   display: none;
@@ -465,14 +457,13 @@ input[type="checkbox"]{
   }
 }
 
-// checkbox wrapper
+// CHECKBOX WRAPPER
 
 .checkbox-wrap {
   padding: 30px 0 18px 0;
 
   .checkboxes {
     display: flex;
-    height: 170px;
     padding-right: 18px;
     margin-top: 15px;
     height: 450px;
@@ -509,7 +500,40 @@ input[type="checkbox"]{
   }
 }
 
-// idle placeholder
+// CHECKBOX FIX responsive:
+
+@media (max-width: 575px) {
+
+  .options-wrap {
+
+    .checkboxes .checkbox-group {
+      padding-right: 18px;
+      height: 80px;
+    }
+  }
+
+  .checkbox-wrap {
+
+    .checkboxes {
+
+      .checkbox-group {
+
+        a.mr-auto {
+          display: none;
+        }
+
+        label {
+          width: 100%;
+          height: 35px;
+          padding-left: 0;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+// IDLE PLACEHOLDER
 
 .form-control::-webkit-input-placeholder       {
   color: $mediumGrey;
@@ -524,7 +548,7 @@ input[type="checkbox"]{
   color: $mediumGrey;
 }
 
-// hover placeholder
+// HOVER PLACEHOLDER
 
 .form-control:hover::-webkit-input-placeholder {
   color: $black;
@@ -539,7 +563,7 @@ input[type="checkbox"]{
   color: $black;
 }
 
-// focus placeholder
+// FOCUS PLACEHOLDER
 
 .form-control:focus::-webkit-input-placeholder {
   color: $black;
@@ -554,7 +578,7 @@ input[type="checkbox"]{
   color: $black;
 }
 
-// focus placeholder
+// FOCUS PLACEHOLDER
 
 input:focus::-webkit-input-placeholder .icon-password {
   color: $black !important;
@@ -586,6 +610,10 @@ input:focus:-ms-input-placeholder .icon-password      {
   color: $black;
 }
 
+.form-control:focus + .icon-login {
+  color: $black !important;
+}
+
 input:focus,
 textarea:focus {
   border: $formElementActiveBorder;
@@ -606,10 +634,6 @@ input.form-control.error {
     left: 12px;
     font-size: 20px;
   }
-
-  input[password] {
-    padding-left: 40px; // here is custom value
-  }
 }
 
 .form-group {
@@ -622,12 +646,18 @@ input.form-control.error {
     font-size: 20px;
   }
 
+  &:first-child {
+
+    .icon-password {
+      left: 77px;
+      top: 26%;
+    }
+  }
+
   input[password] {
     padding-left: 40px;
   }
 }
-
-// Исправить состояния
 
 .form-wrapper {
   display: inline-block;
@@ -636,8 +666,6 @@ input.form-control.error {
 .btn-wrapper {
   display: inline-block;
 }
-
-/* BTN Styles Start */
 
 .container {
   margin: 0 auto;
@@ -714,11 +742,12 @@ input.form-control.error {
   overflow-y: auto;
 }
 
-// card
+// CARD
 
 .card {
   background-color: $cardBg;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  overflow: scroll;
 
   .card-header {
     border-bottom: 1px solid $lightGrey;
@@ -737,10 +766,6 @@ input.form-control.error {
 
   .card-form {
 
-    .select-group {
-      //padding: 18px;
-    }
-
     .form-group {
 
       label {
@@ -754,7 +779,7 @@ input.form-control.error {
   }
 }
 
-// date picker
+// DATE PICKER
 
 .datepicker-form {
 
@@ -810,7 +835,7 @@ input.form-control.error {
   }
 }
 
-//dropdown
+// DROPDOWN
 
 .dropdown-menu {
   display: none;
@@ -819,7 +844,6 @@ input.form-control.error {
   padding: 0 18px 0;
   background-color: $xsLightGrey;
   top: 0;
-  //margin-top: 56px;
   left: 0;
   right: 0;
 
@@ -857,11 +881,9 @@ input.form-control.error {
     border-right: 1px solid #e3e3e3;
     border-bottom: 1px solid #e3e3e3;
     top: 0;
-    //padding-top: 56px;
     border-left: 1px solid #e3e3e3;
     border-right: 1px solid #e3e3e3;
     border-bottom: 1px solid #e3e3e3;
-    //background: linear-gradient(to bottom, transparent, transparent 50px, #f5f5f5 0);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
@@ -870,7 +892,7 @@ input.form-control.error {
   }
 }
 
-// tables
+// TABLES
 
 .table {
   font-size: $tableFontSize;
@@ -930,10 +952,33 @@ input.form-control.error {
     }
 
     i + i {
-      padding-left: 20px;
+      margin-left: 20px;
     }
   }
 }
+
+// TABLE PADDING responsive:
+
+@media (max-width: 991px) {
+  .container {
+
+    .table {
+
+      tr td {
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+
+      tr td:last-child {
+        text-align: right;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+// END
 
 .links {
 
@@ -1011,6 +1056,12 @@ input.form-control.error {
   }
 }
 
+.btn-bottom-wrapper {
+  padding: 18px;
+}
+
+// SORT BUTTONS IN TABLES
+
 .btn-sort {
   display: inline-block;
   padding: 10px;
@@ -1048,7 +1099,9 @@ input.form-control.error {
   }
 }
 
-// pagination
+// END
+
+// PAGINATION
 
 .pagination {
   font-size: 16px;
@@ -1086,7 +1139,7 @@ input.form-control.error {
   }
 }
 
-// Modal
+// MODAL
 
 .modal {
   background-color: $modalBg;
@@ -1183,6 +1236,101 @@ input.form-control.error {
   }
 }
 
+// BANNERS MODAL + LINKS MODAL + BANNERS PAGE >>>
+
+@media (max-width: 1199px) {
+
+  .select-group {
+
+    .form-group {
+      flex-basis: 0 !important;
+    }
+
+    .form-group + .form-group {
+      padding-left: 0 !important;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+
+  .card-form {
+
+    .select-form {
+
+      .checkbox-wrap {
+        width: 100% !important;
+        border: none !important;
+        padding: 0 !important;
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .checkbox-group {
+    flex-basis: 100% !important;
+  }
+
+  .generate-links {
+
+    justify-content: space-between;
+
+    .form-group {
+      width: 100%;
+      margin-bottom: 18px;
+    }
+
+    .btn {
+      width: 49% !important;
+      margin: 0 !important;
+    }
+  }
+
+  .select-group {
+
+    padding: 0;
+    justify-content: center;
+    flex-direction: column;
+
+    .design-select, .compain-select {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    .form-group {
+      //flex-basis: 0;
+      width: 100%;
+    }
+
+    .form-group + .form-group {
+      //padding-left: 0 !important;
+      margin-top: 15px;
+    }
+  }
+}
+
+// END
+// BTN-IDLE FIX responsive (link page):
+
+@media (max-width: 575px) {
+  .generate-links {
+
+    .btn.btn-idle {
+
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & > i {
+        transform: translateX(-260%);
+      }
+    }
+  }
+}
+
+// END
+
 .select-group + .select-group {
   padding-top: 35px;
 }
@@ -1253,8 +1401,7 @@ input.form-control.error {
   }
 }
 
-
-// generated links
+// GENERATED LINKS
 
 .generate-links {
 
@@ -1269,13 +1416,6 @@ input.form-control.error {
     i {
       vertical-align: sub;
     }
-  }
-}
-    
-.options-wrap {
-
-  .check-status {
-    //width: 50%;
   }
 }
 
@@ -1327,11 +1467,6 @@ input.form-control.error {
   }
 }
 
-.button-buttom-wrapper {
-  padding: 20px 24px;
-  border-top: $formElementBorder;
-}
-
 .select-group {
   padding: 25px 18px 40px;
 
@@ -1364,7 +1499,6 @@ input.form-control.error {
   flex-direction: column;
 
   .form-group {
-    //max-width: 455px;
     flex-wrap: nowrap;
 
     label {
@@ -1383,6 +1517,33 @@ input.form-control.error {
     padding-top: 15px;
   }
 }
+
+// PERSONAL DATA PAGE responsive:
+
+@media (max-width: 767px) {
+
+  .personal-data {
+
+    .form-group {
+      flex-direction: column;
+      margin-right: 15px;
+      margin-left: 15px;
+      min-width: 180px;
+      width: 90%;
+
+      label, input {
+        flex-basis: 100%;
+        width: 100%;
+      }
+
+      label {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+// END
 
 .notification-wrapper {
 
@@ -1467,7 +1628,7 @@ input.form-control.error {
     }
 }
 
-// range-slider
+// RANGE SLIDER:
 
 .range-slider {
   padding: 21px;
@@ -1513,11 +1674,30 @@ input.form-control.error {
   }
 }
 
+// END
+
+// RANGE SLIDER responsive:
+
+@media (max-width: 900px) {
+
+  .range-slider {
+    flex-basis: 100%;
+    border: none !important;
+    margin-bottom: 40px;
+  }
+}
+
+// END
+
+// STAT, INDEX PAGE:
+
 .stat-wrapper {
   max-width: 700px;
   margin: 0 auto;
   margin-top: 40px;
   margin-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
 
   .page-title {
     text-transform: none;
@@ -1540,6 +1720,103 @@ input.form-control.error {
     }
   }
 }
+
+// END
+
+// POSTBACK textarea responsive:
+
+@media (max-width: 575px) {
+  .textarea-group {
+
+    .form-group:last-child {
+      flex-basis: 100%;
+      margin-top: 25px;
+    }
+  }
+}
+
+// END
+
+// INDEX PAGE DEF STYLES for the responsive:
+
+.card-date {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.chartwrap {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+// END
+
+// DATE PICKER responsive:
+
+@media (max-width: 767px) {
+
+  .datepicker-form {
+
+    width: 95%;
+    text-align: left;
+    margin: 0 auto;
+    display: flex;
+    white-space: normal;
+
+    .date-input-wrapper {
+
+      margin: 0;
+      margin-right: 5px;
+      padding: 0;
+      border: none;
+      width: 600px;
+      display: inline-block;
+
+
+      &:hover, &:focus {
+        border: none;
+      }
+
+      input {
+        width: 100%;
+        border: $formElementBorder;
+        margin-bottom: 5px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+
+        &:hover, &:focus {
+          border: $formElementActiveBorder;
+        }
+      }
+
+      label {
+        display: none;
+      }
+    }
+
+    button {
+      height: 67px;
+    }
+  }
+}
+
+// END
+
+// INDEX STATS responsive:
+
+@media (max-width: 575px) {
+
+  .stat-wrapper {
+
+    .stat-string {
+      width: 100%;
+      min-width: 180px;
+    }
+  }
+}
+
+// END
 
 #myChart {
   margin: 0 auto;
@@ -1578,6 +1855,13 @@ input.form-control.error {
         width: 215px;
         padding-left: 47px;
       }
+
+      &:hover {
+
+        .icon-login {
+          color: $black !important;
+        }
+      }
     }
 
     button {
@@ -1585,6 +1869,32 @@ input.form-control.error {
     }
   }
 }
+
+// LOGIN modal responsive:
+
+@media (max-width: 767px) {
+
+  .login-group {
+
+    flex-direction: column !important;
+
+    .form-group {
+
+      margin-right: 0 !important;
+      margin-bottom: 10px;
+
+      input {
+        width: 200px !important;
+      }
+    }
+
+    button {
+      width: 200px !important;
+    }
+  }
+}
+
+// END
 
 #quit {
 
@@ -1604,6 +1914,7 @@ input.form-control.error {
 
       button {
         width: 95px;
+        padding: 10px 20px;
       }
 
       button + button {
@@ -1612,3 +1923,77 @@ input.form-control.error {
     }
   }
 }
+
+// QUIT modal responive:
+
+@media (max-width: 575px) {
+
+  #quit {
+
+    .btn-group {
+      padding-left: 0 !important;
+    }
+  }
+}
+
+// END
+
+// TOP MENU responsive:
+
+@media (max-width: 575px) {
+
+  #header {
+
+    .cash.open {
+      & > .icon-arrow-down {
+        display: none;
+      }
+    }
+
+    .cash {
+
+      & > .icon-arrow-down {
+        display: none;
+      }
+
+      & > span {
+        display: none;
+      }
+
+      .dropdown-menu {
+
+        min-width: 200px;
+        z-index: 1;
+      }
+    }
+
+    .notification-wrapper.open {
+
+      li .notification-circle {
+        left: 60% !important;
+      }
+
+      li a {
+        white-space: nowrap;
+        width: 120px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .personal {
+
+      min-width: 0;
+
+      .profile-text {
+        display: none;
+      }
+
+      .icon-profile {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+// END

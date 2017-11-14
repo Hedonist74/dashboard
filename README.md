@@ -1,58 +1,144 @@
-Basic gulp-scss template
+Casual `Dashboard` создан на основе gulp-scss темплейта, благодаря [dmgame](https://github.com/dmgame)
 =====================
 
-### Возможности
-1. Компиляция из scss в css
-2. Минификация css
-3. Добавление вендорных префиксов в css
-4. Автоматическое обновление браузера
-5. Минификация и конкатенация JavaScript
-6. Оптимизация картинок
-7. Создание спрайтов
+###### Творил через:
+-------------
+`jdk`, `npm`, `git`,
+`gulp`, `scss`, `webstorm`,
+`photoshop`, `colormania`
 
+###### Основные функции:
+-------------
+`chart.js`, `jquery`[`bPopup`, `formstyler`, `scrollbar`],
+`preloader`, `datepicker`, `dropdown`
 
-**Процесс установки.**
+## Страницы:
 
-1. Клонируем репозиторий
+ * General
+ * Details
+ * Links
+ * Banners
+ * Personal Data
+ * Payout
+ * Postback
+
+## Модальные окна:
+
+ * Add Links
+ * Banners
+ * Login
+ * Quit
+
+Адаптивно! :+1:
+
+@media расположены логично, найти труда не составит. Сброс применялся. Классы и стили расписаны по компонентам, классы понятные.
+
+###### Привожу список переменных для scss (из _variables.scss):
+-------------
+
 ```js
-git clone https://github.com/dmgame/template.git
-```
-2. Перейдите в склонированную папку или откройте е в редакторе кода
-```js
-cd template
-```
+// Font
+$fontFamily: 'Roboto', sans-serif;
+$fontLight: 300;
+$fontRegular: 400;
+$fontMedium: 500;
+$fontBold: 700;
+$lineHeight: 1;
+$fontSize: 14px;
 
-3. Разворачивание проекта (установка всех модулей). У вас должен быть установлен nodejs и gulp глобально
-```js
- npm up
-```
----
-**Запуск gulp**
-
-1. Запуск gulp. Запустится таск default
-```js
- gulp
-```
----
-***Установка gulp глобально `(если он не установлен)`***
-1. Установите nodejs по ссылке [Nodejs](https://nodejs.org/uk/)
-
-2. Установите gulp глобально
-```js
-npm i gulp -g
-```
----
-***Привяжите к своему репозиторию***
-1. Создайте новый репозиторий на github
-
-2. Подвяжите текущий template к своему репозиторию
-```js
-git remote set-url origin "ссылка на ваш репозиторий"
-```
----
+// Colors
+$black: #333;
+$darkGrey: #979797;
+$darkLightGrey: #bababa;
+$mediumGrey: #a6a6a6;
+$lightMediumGrey: #9c9c9c;
+$lightGrey: #e3e3e3;
+$xsLightGrey: #f5f5f5;
+$mutedGrey: #808080;
 
 
-**Структура папок**
+$orange: #f58220;
+$orangeLight: #ffa200;
+$green: #04ae00;
+$lightGreen: #74b67a;
+$xsLightGreen: #96cc9b;
+
+$red: #ff0000;
+$pink: #de5252;
+$lightPink: #ec7171;
+$blue: #56819f;
+
+// Header
+$headerBg: #fff;
+$top-menu-hover-bgc: #f5f5f2;
+
+// Dropdown
+$shadowDrop: 5px;
+
+// Aside
+$asideBg: #191919;
+$asideWidth: 188px;
+$activeLinkBg: #282828;
+$activeLinkColor: #fff;
+$asideMobileWidth: 60px;
+
+// Card
+
+$cardBg: #fff;
+
+// title
+$titleColor: #a6a6a6;
+$titleFontSize: 16px;
+$smallTitle: 14px;
+
+// form-group
+$formFontFamily: 'Roboto', sans-serif;
+$formMargin: 15px;
+$formElementWidth: 155px;
+$formElementBorder: 1px solid #e3e3e3;
+$formElementErrorBorder: 1px solid #ff0000;
+$formElementActiveBorder: 1px solid #b1b1b1;
+$formElementBorderRadius: 4px;
+$formElementPadding: 14px 18px;
+$formElementColor: #a6a6a6;
+$formElementActiveColor: #333;
+$textareaHeight: 185px;
+$textareaWidth: 500px;
+$textareaFZ: 12px;
+$inputFZ: 14px;
+$errorBorder: 2px solid $red;
+
+// BTN
+
+$btnPadding: 10px 25px;
+$btnFontFamily: 'Roboto', sans-serif;
+$btnFZ: 18px;
+$btnFW: 300;
+$btnBorderRadius: 4px;
+
+
+// BTN Colors
+
+$btnFontColor: #fff;
+$btnGrey: #979797;
+$btnGreyHover: #bababa;
+$btnOrange: #f58220;
+$btnOrangeHover: #ffA200;
+$btnMutedBGColor: #e3e3e3;
+
+
+// table
+
+$tabeTrHover: #f1f3f3;
+$tableFontSize: 13px;
+$tableLinksFontSize: 17px;
+
+// Modal
+$modalBg: #fff;
+```
+
+###### Структура папок
+-------------
 
 Название папок  | Содержание файла
 ----------------|----------------------
@@ -67,8 +153,8 @@ src/img         | Исходные картинки, они будут мини�
 src/js          | Исходный js будет минифицироваться и переносится в app/js
 src/sprite      | Папка для нарезанных картинок под будущие спрайты, после конветрации попадут в app/img
 
----
-**Используемые по модули**
+###### Используемые по модули
+-------------
 
 ```js
 var gulp         = require('gulp'), // Подключаем Gulp
@@ -83,27 +169,24 @@ var gulp         = require('gulp'), // Подключаем Gulp
     autoprefixer = require('gulp-autoprefixer'),// Подключаем библиотеку для автоматического добавления префиксов
     spritesmith = require('gulp.spritesmith'), // Подключение библиотеки для создания спрайтов
     merge = require('merge-stream');
-
 ```
-**Все таски gulp file**
 
+###### Все таски gulp file
+-------------
 
 ```js
-
 gulp.task('css', function(){ // Создаем таск Sass
     return gulp.src('src/css/**/*.css') // Берем источник
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
         .pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
         .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
 });
-
 gulp.task('sass', function () {
     gulp.src('src/scss/**/*.scss')
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest('app/css'))
 }) ;
-
 gulp.task('browser-sync', function() { // Создаем таск browser-sync
     browserSync({ // Выполняем browserSync
         server: { // Определяем параметры сервера
@@ -112,7 +195,6 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
         notify: false // Отключаем уведомления
     });
 });
-
 gulp.task('sprite', function () { // Создаем таск sprite
     var spriteData = gulp.src('src/sprite/*.png').pipe(spritesmith({ // Настройка спрайта
         imgName: 'sprite.png',
@@ -127,22 +209,18 @@ gulp.task('sprite', function () { // Создаем таск sprite
 
     return merge(imgStream, cssStream);
 });
-
-
 gulp.task('scripts', function() {
     return gulp.src('src/js/**/*.js')
         .pipe(concat('plugins.min.js')) // Собираем их в кучу в новом файле plugins.min.js
         .pipe(uglify()) // Сжимаем JS файл
         .pipe(gulp.dest('app/js')); // Выгружаем в папку app/js
 });
-
 gulp.task('css-libs', ['css'], function() {
     return gulp.src('app/css/style.css') // Выбираем файл для минификации
         .pipe(cssnano()) // Сжимаем
         .pipe(rename({suffix: '.min'})) // Добавляем суффикс .min
         .pipe(gulp.dest('app/css')); // Выгружаем в папку app/css
 });
-
 gulp.task('watch', ['browser-sync', 'css', 'scripts', 'sprite', 'sass'], function() {
     // gulp.watch('src/css/**/*.css', ['css']); // Наблюдение за css файлами в папке css
     gulp.watch('src/scss/**/*.scss', ['sass']);
@@ -151,7 +229,6 @@ gulp.task('watch', ['browser-sync', 'css', 'scripts', 'sprite', 'sass'], functio
     gulp.watch('app/js/**/*.js', browserSync.reload);   // Наблюдение за JS файлами в папке js
     gulp.watch('app/js/**/*.js', ['scripts']);   // Наблюдение за JS файлами в папке js
 });
-
         .pipe(cache(imagemin({  // Сжимаем их с наилучшими настройками с учетом кеширования
             interlaced: true,
             progressive: true,
@@ -162,30 +239,8 @@ nt()]
         })))
         .pipe(gulp.dest('app/img')); // Выгружаем на продакшен
 });
-
-
 gulp.task('clear', function () {
     return cache.clearAll();
 });
-
 gulp.task('default', ['watch']);
-
-```"# dashboard" 
-
-
-    Use only:
-
-    # `WebStorm` + `GIT` + `NPM` + `GULP`template + `SCSS`
-    # `jQuerry` + `jQuerry_UI`
-    # `Glyphter` icons
-    # `Canvas`
-    # `Flex`
-    # `bPopUp` pre-loader
-
-    JS_tasks:
-
-    # .date-picker-plug
-    # .modal-task
-    # .form-styler-plug
-    # .scrollbar-plug
-    # .chart-block (which use canvas)
+```

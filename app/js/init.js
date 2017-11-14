@@ -73,7 +73,7 @@ $( function() {
         }
     });
 
-    console.log(handle, range);
+    // console.log(handle, range);
 
     // chart init
     var ctx = document.getElementById('myChart');
@@ -102,16 +102,19 @@ $( function() {
                 ]
             },
             options: {
-                responsive: false,
+                responsive: true,
                 scales: {
                     yAxes: [{
                         ticks: {
                             beginAtZero:true
+                        },
+                        gridLines: {
+                            display: false
                         }
                     }]
                 },
                 legend: {
-                    display: true,
+                    display: true
                 }
             }
         })

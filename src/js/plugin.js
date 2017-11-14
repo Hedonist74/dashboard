@@ -48,7 +48,7 @@
             body.removeClass(mobileClass);
             body.removeClass(openInMobile);
         }
-        console.log(width);
+        // console.log(width);
     });
 
     // PRE LOADER HIDE
