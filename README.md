@@ -1,4 +1,4 @@
-Casual `Dashboard` создан на основе gulp-scss темплейта, благодаря [dmgame](https://github.com/dmgame)
+Casual `Dashboard` создан на основе gulp-scss темплейта и макета, предоставленных [dmgame](https://github.com/dmgame)
 =====================
 
 ###### Творил через:
@@ -9,7 +9,7 @@ Casual `Dashboard` создан на основе gulp-scss темплейта, 
 
 ###### Основные функции:
 -------------
-`chart.js`, `jquery`[`bPopup`, `formstyler`, `scrollbar`],
+`chart.js`, `jquery [bPopup, formstyler, scrollbar]`,
 `preloader`, `datepicker`, `dropdown`
 
 ## Страницы:
@@ -31,12 +31,12 @@ Casual `Dashboard` создан на основе gulp-scss темплейта, 
 
 Адаптивно! :+1:
 
-@media расположены логично, найти труда не составит. Сброс применялся. Классы и стили расписаны по компонентам, классы понятные.
+@media расположены логично, найти труда не составит. Сброс применялся. Cтили расписаны по компонентам. Классы понятные.
 
 ###### Привожу список переменных для scss (из _variables.scss):
 -------------
 
-```js
+```scss
 // Font
 $fontFamily: 'Roboto', sans-serif;
 $fontLight: 300;
