@@ -61,7 +61,7 @@ $( function() {
         orientaion: 'horizontal',
         range: 'min',
         animate: true,
-        max: 200,
+        max: 168,
 
         create: function(event, ui) {
             handle.append('<span class="value">'+$( this ).slider( "value" )+'&nbsp;'+'hours</span>');
@@ -102,7 +102,7 @@ $( function() {
                 ]
             },
             options: {
-                responsive: true,
+                responsive: false,
                 scales: {
                     yAxes: [{
                         ticks: {

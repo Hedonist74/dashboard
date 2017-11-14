@@ -60,21 +60,25 @@
                 </div>
                 <ul>
                     <li>
-                        <a href="#">You’ve got 100 signups</a>
+                        <a href="#">
+                            <span>You’ve got 100 signups</span>
+                        </a>
                         <span class="notification-circle"></span>
                     </li>
                     <li>
-                        <a href="#">Banner 03 don’t work</a>
+                        <a href="#">
+                            <span>Banner 03 don’t work</span>
+                        </a>
                         <span class="notification-circle"></span>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="personal top-menu">
+        <div class="personal top-menu" data-modal data-target="#login">
             <i class="icon-profile"></i>
             <span class="profile-text">Leonardo Dicaprio</span>
         </div>
-        <div class="quit top-menu">
+        <div class="quit top-menu" data-modal data-target="#quit">
             <i class="icon-quit"></i>
         </div>
     </div>
@@ -519,6 +523,40 @@
 </main>
 
 <!-- CARD BODY END -->
+
+<!-- MODAL START -->
+<!-- MODAL login -->
+<div class="modal" id="login">
+    <div class="card-header">
+        <span class="page-title">Login</span>
+    </div>
+    <div class="card-body">
+        <div class="login-group flex-container align-center">
+            <div class="form-group enter-login">
+                <input type="text" class="form-control" placeholder="" password>
+                <i class="icon-login"></i>
+            </div>
+            <div class="form-group enter-password">
+                <input type="password" class="form-control" placeholder="" password>
+                <i class="icon-password"></i>
+            </div>
+            <button class="btn btn-orange">Enter</button>
+        </div>
+    </div>
+</div>
+<!-- MODAL quit -->
+<div class="modal" id="quit">
+    <div class="card-header">
+        <span class="page-title">Do you really want to Quit?</span>
+    </div>
+    <div class="card-body">
+        <div class="btn-group">
+            <button class="btn btn-grey">Cancel</button>
+            <button class="btn btn-orange">Quit</button>
+        </div>
+    </div>
+</div>
+<!-- MODAL END -->
 
 <!-- PRE LOADER START -->
 <div id="loading">

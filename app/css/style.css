@@ -2726,16 +2726,25 @@ input.form-control.error {
 
 .datepicker-form .date-input-wrapper {
   display: inline-block;
-  padding: 5px 0;
   border: 1px solid #e3e3e3;
   -webkit-border-radius: 3px;
           border-radius: 3px;
   color: #333;
   margin-right: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.datepicker-form .date-input-wrapper:hover {
+  border: 1px solid #979797;
+}
+
+.datepicker-form .date-input-wrapper:hover label .icon-calendar {
+  color: #333;
 }
 
 .datepicker-form .date-input-wrapper input {
-  padding: 12px 16px;
+  padding: 7px 16px;
   vertical-align: middle;
 }
 
@@ -3014,6 +3023,12 @@ input.form-control.error {
 .modal#links {
   width: 70%;
   min-height: 100px;
+}
+
+.modal#links .checkbox-wrap {
+  width: 100% !important;
+  padding-right: 0;
+  border-right: none;
 }
 
 .modal#banners {
@@ -3351,8 +3366,18 @@ input.form-control.error {
   color: #56819f;
 }
 
+.notification-wrapper.open li > a span:hover {
+  color: #f58220;
+}
+
 .range-slider {
   padding: 21px;
+}
+
+.range-slider .min-max {
+  color: #a6a6a6;
+  padding-top: 30px;
+  padding-bottom: 5px;
 }
 
 .range-slider #slider {
@@ -3369,17 +3394,17 @@ input.form-control.error {
 }
 
 .range-slider #custom-handle {
-  top: 12px;
+  top: 28px;
   width: 0;
   height: 0;
   border: 20px solid transparent;
   background-color: transparent;
   border-bottom-color: #f58220;
-  text-align: left;
   outline: none;
-  -webkit-transform: translateX(-12px);
-      -ms-transform: translateX(-12px);
-          transform: translateX(-12px);
+  -webkit-transform: translateX(-7px);
+      -ms-transform: translateX(-7px);
+          transform: translateX(-7px);
+  border-width: 0 15px 23px 15px;
 }
 
 .range-slider #custom-handle span.value {
@@ -3389,6 +3414,100 @@ input.form-control.error {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+.stat-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.stat-wrapper .page-title {
+  text-transform: none;
+}
+
+.stat-wrapper > .page-title {
+  margin-top: 75px;
+}
+
+.stat-wrapper .stat-string {
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  width: 45%;
+  border-bottom: 1px solid #e3e3e3;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+.stat-wrapper .stat-string .stat-value {
+  color: #333;
+  font-size: 16px;
+}
+
+#myChart {
+  margin: 0 auto;
+  width: 720px;
+  height: 400px;
+}
+
+#login .card-header {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+#login .card-body {
+  padding: 47px;
+}
+
+#login .login-group .form-group {
+  margin-right: 18px;
+}
+
+#login .login-group .form-group .icon-password, #login .login-group .form-group .icon-login {
+  position: absolute;
+  top: 25%;
+  left: 15px;
+}
+
+#login .login-group .form-group .icon-login {
+  top: 30%;
+  font-size: 16px;
+  color: #a6a6a6;
+}
+
+#login .login-group .form-group input {
+  width: 215px;
+  padding-left: 47px;
+}
+
+#login .login-group button {
+  width: 170px;
+}
+
+#quit .card-header {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+#quit .card-header .page-title {
+  text-transform: none;
+}
+
+#quit .card-body {
+  padding: 20px;
+}
+
+#quit .card-body .btn-group {
+  padding-left: 108px;
+}
+
+#quit .card-body .btn-group button {
+  width: 95px;
+}
+
+#quit .card-body .btn-group button + button {
+  margin-left: 20px;
 }
 
 #main {
